@@ -174,12 +174,60 @@
   box-shadow:0 42px 90px rgba(0,0,0,.44),12px 0 50px rgba(209,160,93,.055)!important;
 }
 
-/* GF-03 — preserve the real V4.8 publish state machine. */
+/* GF-03 — preserve the real V4.8 publish state machine, then let the artifact own the frame. */
 .v5-functional-preview .result.v4-issue .v3-share-studio{background:#080808!important}
 .v5-functional-preview .result.v4-issue .v3-share-studio-copy{max-width:420px!important}
 .v5-functional-preview .result.v4-issue .v3-share-stage{box-shadow:none!important}
-.v5-functional-preview .result.v4-issue .v3-share-studio[data-v48-publish="published"] .v3-share-studio-copy{opacity:.18!important}
-.v5-functional-preview .result.v4-issue .v3-share-studio[data-v48-publish="published"] .v3-share-stage{transform:none!important}
+.v5-functional-preview .result.v4-issue .v3-share-studio[data-v48-publish="preparing"] .v3-share-studio-copy,
+.v5-functional-preview .result.v4-issue .v3-share-studio[data-v48-publish="isolated"] .v3-share-studio-copy,
+.v5-functional-preview .result.v4-issue .v3-share-studio[data-v48-publish="flattening"] .v3-share-studio-copy{
+  opacity:.12!important;pointer-events:none!important;
+}
+.v5-functional-preview .result.v4-issue .v3-share-studio[data-v48-publish="published"]{
+  min-height:calc(100svh - 58px)!important;
+  scroll-margin-top:58px!important;
+  align-content:center!important;
+  grid-template-columns:1fr!important;
+  grid-template-areas:"stage" "copy" "tools"!important;
+  justify-items:center!important;
+  gap:14px!important;
+  padding:30px clamp(18px,4vw,56px) 34px!important;
+  background:
+    radial-gradient(ellipse at 50% 34%,rgba(255,238,199,.075),transparent 28%),
+    #050505!important;
+}
+.v5-functional-preview .result.v4-issue .v3-share-studio[data-v48-publish="published"]::before{
+  opacity:.3!important;
+}
+.v5-functional-preview .result.v4-issue .v3-share-studio[data-v48-publish="published"] .v3-share-stage{
+  grid-area:stage!important;
+  width:min(46vw,500px)!important;
+  justify-self:center!important;
+  transform:none!important;
+  box-shadow:none!important;
+}
+.v5-functional-preview .result.v4-issue .v3-share-studio[data-format="9:16"][data-v48-publish="published"] .v3-share-stage{
+  width:min(34vw,360px)!important;
+}
+.v5-functional-preview .result.v4-issue .v3-share-studio[data-v48-publish="published"] .v3-share-studio-copy{
+  grid-area:copy!important;
+  width:auto!important;max-width:none!important;
+  display:flex!important;align-items:center!important;justify-content:center!important;
+  margin:0!important;opacity:1!important;
+}
+.v5-functional-preview .result.v4-issue .v3-share-studio[data-v48-publish="published"] .v3-share-studio-copy>span,
+.v5-functional-preview .result.v4-issue .v3-share-studio[data-v48-publish="published"] .v3-share-studio-copy>h3,
+.v5-functional-preview .result.v4-issue .v3-share-studio[data-v48-publish="published"] .v3-share-studio-copy>p,
+.v5-functional-preview .result.v4-issue .v3-share-studio[data-v48-publish="published"] .v3-share-generate{
+  display:none!important;
+}
+.v5-functional-preview .result.v4-issue .v3-share-studio[data-v48-publish="published"] .v3-share-formats{
+  margin:0!important;
+}
+.v5-functional-preview .result.v4-issue .v3-share-studio[data-v48-publish="published"] .v3-share-tools{
+  grid-area:tools!important;
+  justify-content:center!important;text-align:center!important;
+}
 
 /* Mobile is authored separately; no desktop two-column stacking. */
 @media(max-width:760px){
