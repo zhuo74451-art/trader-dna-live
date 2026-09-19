@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 900" role="img" aria-label="Ed Seykota">
+  <rect width="720" height="900" fill="#d8d5cd"/>
+  <path d="M0 0h720v900H0z" fill="url(#g)"/>
+  <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f3f0e8" stop-opacity=".64"/><stop offset=".58" stop-color="#a9a69f" stop-opacity=".18"/><stop offset="1" stop-color="#686760" stop-opacity=".22"/></linearGradient></defs>
+  <g fill="none" stroke="#0a0a09" stroke-opacity=".12">
+    <path d="M48 92h624M48 808h624"/>
+    <path d="M96 48v804M624 48v804"/>
+    <circle cx="360" cy="402" r="176"/>
+    <path d="M228 606c42-72 88-108 132-108s90 36 132 108"/>
+  </g>
+  <text x="54" y="78" fill="#0a0a09" fill-opacity=".34" font-family="monospace" font-size="18" font-weight="700" letter-spacing="4">ARCHIVE / PORTRAIT</text>
+  <text x="360" y="470" text-anchor="middle" fill="#0a0a09" fill-opacity=".28" font-family="Arial, sans-serif" font-size="180" font-weight="900" letter-spacing="-12">ES</text>
+  <text x="54" y="842" fill="#0a0a09" fill-opacity=".62" font-family="Arial, sans-serif" font-size="28" font-weight="700">Ed Seykota</text>
+  <text x="54" y="870" fill="#0a0a09" fill-opacity=".34" font-family="monospace" font-size="14" font-weight="700" letter-spacing="2">LOCAL ARCHIVE FALLBACK</text>
+</svg>

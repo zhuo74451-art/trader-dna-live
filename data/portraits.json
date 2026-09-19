@@ -1,0 +1,258 @@
+{
+  "Charles Darwin": {
+    "kind": "image",
+    "url": "./assets/portraits/charles-darwin.jpg",
+    "source": "Wikimedia Commons",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Charles_Darwin_portrait.jpg",
+    "license": "Public domain",
+    "credit": "Herbert Rose Barraud"
+  },
+  "Howard Marks": {
+    "kind": "image",
+    "url": "./assets/portraits/howard-marks.jpg",
+    "source": "Wikimedia Commons",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Howard_Marks_2.17.12_(cropped).jpg",
+    "license": "CC BY 2.0",
+    "credit": "kellywritershouse"
+  },
+  "Warren Buffett": {
+    "kind": "image",
+    "url": "./assets/portraits/warren-buffett.jpg",
+    "source": "Wikimedia Commons",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Warren_Buffett_KU_Visit.jpg",
+    "license": "CC BY-SA 2.0",
+    "credit": "Mark Hirschey"
+  },
+  "Charlie Munger": {
+    "kind": "image",
+    "url": "./assets/portraits/charlie-munger.jpg",
+    "source": "Wikimedia Commons",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Charlie_Munger_(cropped).jpg",
+    "license": "CC BY 2.0",
+    "credit": "Nick"
+  },
+  "Peter Thiel": {
+    "kind": "image",
+    "url": "./assets/portraits/peter-thiel.jpg",
+    "source": "Wikimedia Commons",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Peter_Thiel_by_Gage_Skidmore.jpg",
+    "license": "CC BY-SA 3.0",
+    "credit": "Gage Skidmore"
+  },
+  "Marc Andreessen": {
+    "kind": "image",
+    "url": "./assets/portraits/marc-andreessen.jpg",
+    "source": "Wikimedia Commons",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Marc_Andreessen-9_(cropped).jpg",
+    "license": "CC BY 2.0",
+    "credit": "JD Lasica"
+  },
+  "Jeff Bezos": {
+    "kind": "image",
+    "url": "./assets/portraits/jeff-bezos.jpg",
+    "source": "Wikimedia Commons",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Jeff_Bezos_at_Amazon_Spheres_Grand_Opening_in_Seattle_-_2018_(39074799225)_(cropped).jpg",
+    "license": "CC BY 2.0",
+    "credit": "Seattle City Council from Seattle"
+  },
+  "Philip Fisher": {
+    "kind": "fallback",
+    "url": "./assets/portraits/philip-fisher.svg",
+    "source": "82TRADE local archive fallback",
+    "sourceUrl": "",
+    "license": "",
+    "credit": ""
+  },
+  "George Soros": {
+    "kind": "image",
+    "url": "./assets/portraits/george-soros.jpg",
+    "source": "Wikimedia Commons",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:George_Soros_-_May_31,_2017.jpg",
+    "license": "CC BY 4.0",
+    "credit": "Aris Oikonomou - European Commission"
+  },
+  "Paul Tudor Jones": {
+    "kind": "image",
+    "url": "./assets/portraits/paul-tudor-jones.jpg",
+    "source": "Wikimedia Commons",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Paul_Tudor_Jones,_Tudor_Investments.jpg",
+    "license": "CC BY 3.0",
+    "credit": "Hedge Funds"
+  },
+  "Dwight Eisenhower": {
+    "kind": "image",
+    "url": "./assets/portraits/dwight-eisenhower.jpg",
+    "source": "Wikimedia Commons",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Dwight_D._Eisenhower,_official_photo_portrait,_May_29,_1959.jpg",
+    "license": "Public domain",
+    "credit": "White House"
+  },
+  "Chester Nimitz": {
+    "kind": "image",
+    "url": "./assets/portraits/chester-nimitz.jpg",
+    "source": "Wikimedia Commons",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Chester_Nimitz-fleet-admiral.jpg",
+    "license": "Public domain",
+    "credit": "\"Official U.S. Navy Photograph now in the collections of the National Archive\"."
+  },
+  "Stanley Druckenmiller": {
+    "kind": "fallback",
+    "url": "./assets/portraits/stanley-druckenmiller.svg",
+    "source": "82TRADE local archive fallback",
+    "sourceUrl": "",
+    "license": "",
+    "credit": ""
+  },
+  "Jesse Livermore": {
+    "kind": "fallback",
+    "url": "./assets/portraits/jesse-livermore.svg",
+    "source": "82TRADE local archive fallback",
+    "sourceUrl": "",
+    "license": "",
+    "credit": ""
+  },
+  "Steve Jobs": {
+    "kind": "image",
+    "url": "./assets/portraits/steve-jobs.jpg",
+    "source": "Wikimedia Commons",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Steve_Jobs_Headshot_2010-CROP2.jpg",
+    "license": "CC BY-SA 3.0",
+    "credit": "MetalGearLiquid , based on File:Steve_Jobs_Headshot_2010-CROP.jpg made by Matt Yohe"
+  },
+  "Elon Musk": {
+    "kind": "image",
+    "url": "./assets/portraits/elon-musk.jpg",
+    "source": "Wikimedia Commons",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Elon_Musk_(54816836217)_(cropped_2)_(b).jpg",
+    "license": "CC BY-SA 4.0",
+    "credit": "Gage Skidmore"
+  },
+  "Nassim Nicholas Taleb": {
+    "kind": "fallback",
+    "url": "./assets/portraits/nassim-nicholas-taleb.svg",
+    "source": "82TRADE local archive fallback",
+    "sourceUrl": "",
+    "license": "",
+    "credit": ""
+  },
+  "Daniel Kahneman": {
+    "kind": "fallback",
+    "url": "./assets/portraits/daniel-kahneman.svg",
+    "source": "82TRADE local archive fallback",
+    "sourceUrl": "",
+    "license": "",
+    "credit": ""
+  },
+  "Benjamin Graham": {
+    "kind": "fallback",
+    "url": "./assets/portraits/benjamin-graham.svg",
+    "source": "82TRADE local archive fallback",
+    "sourceUrl": "",
+    "license": "",
+    "credit": ""
+  },
+  "Marcus Aurelius": {
+    "kind": "image",
+    "url": "./assets/portraits/marcus-aurelius.jpg",
+    "source": "Wikimedia Commons",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Marcus_Aurelius_Louvre_MR561_n02.jpg",
+    "license": "CC BY 2.5",
+    "credit": ""
+  },
+  "Michael Mauboussin": {
+    "kind": "fallback",
+    "url": "./assets/portraits/michael-mauboussin.svg",
+    "source": "82TRADE local archive fallback",
+    "sourceUrl": "",
+    "license": "",
+    "credit": ""
+  },
+  "Peter Lynch": {
+    "kind": "fallback",
+    "url": "./assets/portraits/peter-lynch.svg",
+    "source": "82TRADE local archive fallback",
+    "sourceUrl": "",
+    "license": "",
+    "credit": ""
+  },
+  "Li Lu": {
+    "kind": "fallback",
+    "url": "./assets/portraits/li-lu.svg",
+    "source": "82TRADE local archive fallback",
+    "sourceUrl": "",
+    "license": "",
+    "credit": ""
+  },
+  "Marie Curie": {
+    "kind": "fallback",
+    "url": "./assets/portraits/marie-curie.svg",
+    "source": "82TRADE local archive fallback",
+    "sourceUrl": "",
+    "license": "",
+    "credit": ""
+  },
+  "Jim Simons": {
+    "kind": "image",
+    "url": "./assets/portraits/jim-simons.jpg",
+    "source": "Wikimedia Commons",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:James_Simons_2007.jpg",
+    "license": "CC BY-SA 2.0 de",
+    "credit": "Gert-Martin Greuel"
+  },
+  "Ed Seykota": {
+    "kind": "fallback",
+    "url": "./assets/portraits/ed-seykota.svg",
+    "source": "82TRADE local archive fallback",
+    "sourceUrl": "",
+    "license": "",
+    "credit": ""
+  },
+  "Jack Bogle": {
+    "kind": "fallback",
+    "url": "./assets/portraits/jack-bogle.svg",
+    "source": "82TRADE local archive fallback",
+    "sourceUrl": "",
+    "license": "",
+    "credit": ""
+  },
+  "Miyamoto Musashi": {
+    "kind": "image",
+    "url": "./assets/portraits/miyamoto-musashi.png",
+    "source": "Wikimedia Commons",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Miyamoto_Musashi-Portrait-Edo-period.png",
+    "license": "Public domain",
+    "credit": "Unknown author Unknown author"
+  },
+  "Edward Thorp": {
+    "kind": "fallback",
+    "url": "./assets/portraits/edward-thorp.svg",
+    "source": "82TRADE local archive fallback",
+    "sourceUrl": "",
+    "license": "",
+    "credit": ""
+  },
+  "David Tepper": {
+    "kind": "fallback",
+    "url": "./assets/portraits/david-tepper.svg",
+    "source": "82TRADE local archive fallback",
+    "sourceUrl": "",
+    "license": "",
+    "credit": ""
+  },
+  "John Maynard Keynes": {
+    "kind": "fallback",
+    "url": "./assets/portraits/john-maynard-keynes.svg",
+    "source": "82TRADE local archive fallback",
+    "sourceUrl": "",
+    "license": "",
+    "credit": ""
+  },
+  "John D. Rockefeller": {
+    "kind": "fallback",
+    "url": "./assets/portraits/john-d-rockefeller.svg",
+    "source": "82TRADE local archive fallback",
+    "sourceUrl": "",
+    "license": "",
+    "credit": ""
+  }
+}

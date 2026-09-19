@@ -1,0 +1,44 @@
+/*
+  V3 subtraction / readability pass.
+  Keep only one M2 mechanism at Q18: matter morph + one impact beat.
+  The perspective grid was visually competent but pushed the scene back toward generic tech UI,
+  so it is intentionally removed here.
+*/
+.v3-reveal-grid{display:none!important}
+
+/* Result must settle into an editorial document, not inherit the dark V1 card surfaces. */
+.result-grid{
+  background:rgba(10,10,9,.18)!important;
+  gap:1px!important;
+}
+.result-grid .portrait-section{
+  background:var(--v3-paper)!important;
+  color:var(--v3-ink)!important;
+}
+.portrait-section .portrait,
+.portrait-section .portrait p{
+  color:rgba(10,10,9,.72)!important;
+}
+.result-grid .share-preview{
+  background:var(--v3-ink)!important;
+  color:var(--v3-paper)!important;
+}
+.people{
+  background:rgba(10,10,9,.16)!important;
+}
+.person{
+  background:var(--v3-paper)!important;
+  color:rgba(10,10,9,.68)!important;
+}
+.reminder{
+  background:transparent!important;
+  border-top:1px solid rgba(10,10,9,.18)!important;
+  border-bottom:0!important;
+}
+.reminder h3{color:rgba(10,10,9,.46)!important}
+.reminder p{color:rgba(10,10,9,.72)!important}
+
+@media(max-width:620px){
+  .result-grid{display:block!important;background:transparent!important}
+  .result-grid .portrait-section{border-bottom:1px solid rgba(10,10,9,.18)!important}
+}

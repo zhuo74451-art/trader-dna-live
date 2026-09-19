@@ -1,0 +1,1051 @@
+/* Trader DNA V4.5 — result opens as the issuance shot, then hard-cuts into the paper dossier. */
+
+/* Hero subtraction: one issued object only. The old V3 artifact and the old inline
+   share preview do not compete with the sealed Identity Plate. */
+.result.v4-issue .result-hero .v3-result-artifact{display:none!important}
+.result.v4-issue .result-hero{
+  min-height:calc(100svh - 58px)!important;
+  background:
+    radial-gradient(circle at 74% 54%,color-mix(in srgb,var(--tc) 11%,transparent),transparent 31%),
+    radial-gradient(circle at 68% 52%,rgba(255,255,255,.055),transparent 18%),
+    #050505!important;
+  color:#f4f1e9!important;
+  border-bottom:0!important;
+}
+.result.v4-issue .result-hero .dossier-head{
+  color:rgba(244,241,233,.5)!important;
+  border-color:rgba(244,241,233,.17)!important;
+}
+.result.v4-issue .result-hero .dossier-head span:last-child{color:rgba(244,241,233,.72)!important}
+.result.v4-issue .result-hero .result-kicker{color:var(--tc,#c8ff35)!important}
+.result.v4-issue .result-hero .code,.result.v4-issue .result-hero .identity{color:#f4f1e9!important}
+.result.v4-issue .result-hero .code{text-shadow:0 0 34px color-mix(in srgb,var(--tc) 10%,transparent)}
+.result.v4-issue .result-hero .hook{color:rgba(244,241,233,.7)!important}
+.result.v4-issue .result-hero .result-foot{
+  color:rgba(244,241,233,.42)!important;
+  border-color:rgba(244,241,233,.16)!important;
+}
+.result.v4-issue .result-hero .result-lock{filter:invert(1);opacity:.74}
+.result.v4-issue .result-hero .v4-result-mark{
+  right:clamp(22px,4vw,68px);
+  top:54%;
+  bottom:auto;
+  width:min(44vw,620px);
+  opacity:.96;
+  transform:translateY(-50%) rotate(-2.4deg);
+  filter:drop-shadow(0 34px 72px rgba(0,0,0,.5));
+  animation:v4-issued-arrive .78s cubic-bezier(.16,1,.3,1) both;
+}
+.result.v4-issue .result-hero .v4-result-mark .v4-weave{height:clamp(180px,18vw,246px)}
+.result.v4-issue .result-hero .code,.result.v4-issue .result-hero .identity,.result.v4-issue .result-hero .hook{
+  animation:v4-issued-copy .68s cubic-bezier(.16,1,.3,1) both;
+}
+.result.v4-issue .result-hero .identity{animation-delay:.045s}
+.result.v4-issue .result-hero .hook{animation-delay:.09s}
+@keyframes v4-issued-arrive{from{opacity:0;transform:translateY(-47%) rotate(-2.4deg) scale(.965);filter:blur(7px) drop-shadow(0 20px 50px rgba(0,0,0,.34))}to{opacity:.96;transform:translateY(-50%) rotate(-2.4deg) scale(1);filter:blur(0) drop-shadow(0 34px 72px rgba(0,0,0,.5))}}
+@keyframes v4-issued-copy{from{opacity:.12;transform:translateY(12px)}to{opacity:1;transform:none}}
+.result.v4-issue .result-grid .share-preview{display:none!important}
+
+.result.v4-issue .v3-dossier-index{display:none!important}
+.result.v4-issue .v4-issue-section{position:relative}
+.result.v4-issue .v4-folio-tag{
+  position:absolute;top:16px;left:clamp(18px,4vw,56px);z-index:5;
+  display:flex;align-items:center;gap:10px;
+  font:760 8px/1 var(--v3-data-mono,monospace);letter-spacing:.14em;
+  color:rgba(10,10,9,.38);pointer-events:none
+}
+.result.v4-issue .v4-folio-tag b{font-size:9px;color:var(--tc,#c8ff35)}
+.result.v4-issue .v4-folio-tag span{font-weight:680}
+
+/* 01 / Signals — the paper dossier begins immediately after the black issuance shot. */
+.result.v4-issue .v3-signal-strip{
+  padding-top:clamp(72px,8vw,108px);
+  padding-bottom:clamp(42px,6vw,78px);
+  background:linear-gradient(90deg,color-mix(in srgb,var(--tc) 6%,transparent),transparent 42%),#efede6;
+  border-top:0;
+  box-shadow:0 -1px 0 #efede6;
+}
+.result.v4-issue .v3-signal-head{margin-bottom:clamp(30px,4vw,54px)}
+.result.v4-issue .v3-signal-grid{border-left:0;border-top:1px solid rgba(10,10,9,.2)}
+.result.v4-issue .v3-signal-card{
+  min-height:clamp(150px,15vw,210px);
+  border-right:0;
+  border-bottom:1px solid rgba(10,10,9,.18);
+  padding:clamp(20px,2.2vw,30px) clamp(14px,2vw,26px);
+}
+.result.v4-issue .v3-signal-card+.v3-signal-card{border-left:1px solid rgba(10,10,9,.16)}
+.result.v4-issue .v3-signal-card strong{font-size:clamp(30px,3.5vw,52px)}
+
+/* 02 / Decision scenes — the one secondary delight: native sticky case files. */
+.result.v4-issue .v3-decision-scenes{
+  overflow:visible!important;
+  padding-top:clamp(74px,8vw,116px);
+  padding-bottom:clamp(120px,18vh,230px);
+  background:#e9e6de;
+}
+.result.v4-issue .v3-scenes-head{margin-bottom:clamp(40px,6vw,82px)}
+.result.v4-issue .v3-scenes-grid{
+  display:block!important;
+  max-width:1120px;
+  margin:0 auto;
+  border:0!important;
+  overflow:visible!important;
+  position:relative
+}
+.result.v4-issue .v3-scene-card{
+  position:sticky!important;
+  top:calc(76px + var(--v4-stack-index,0)*18px);
+  min-height:min(64vh,560px);
+  margin:0 0 clamp(92px,14vh,170px);
+  padding:clamp(34px,5vw,68px);
+  display:grid!important;
+  grid-template-columns:minmax(90px,.24fr) minmax(190px,.62fr) minmax(260px,1fr);
+  grid-template-rows:auto 1fr auto;
+  column-gap:clamp(26px,4vw,64px);
+  align-items:start;
+  border:1px solid rgba(10,10,9,.22)!important;
+  background:#efede6;
+  box-shadow:0 -16px 40px rgba(10,10,9,.055),0 1px 0 rgba(255,255,255,.48) inset;
+  overflow:hidden;
+  isolation:isolate
+}
+.result.v4-issue .v3-scene-card:nth-child(2){background:#e9e6de}
+.result.v4-issue .v3-scene-card:nth-child(3){background:#e3e0d8;margin-bottom:0}
+.result.v4-issue .v3-scene-card::after{display:none!important}
+.result.v4-issue .v3-scene-card::before{
+  content:attr(data-v4-case);
+  position:absolute;right:clamp(18px,3vw,42px);top:clamp(12px,2vw,24px);z-index:-1;
+  font:900 clamp(92px,14vw,190px)/.8 var(--v3-display-sans,sans-serif);
+  letter-spacing:-.1em;color:rgba(10,10,9,.045)
+}
+.result.v4-issue .v3-scene-no{
+  grid-column:1;grid-row:1/4;
+  font-size:11px;letter-spacing:.2em;color:rgba(10,10,9,.35)
+}
+.result.v4-issue .v3-scene-card h3{
+  grid-column:2;grid-row:1;
+  margin:0!important;
+  max-width:8ch;
+  font-size:clamp(44px,5.8vw,78px);
+  line-height:.9
+}
+.result.v4-issue .v3-scene-card p{
+  grid-column:3;grid-row:1/3;
+  margin:0!important;
+  align-self:start;
+  max-width:34ch;
+  font-size:clamp(16px,1.35vw,20px);
+  line-height:1.75
+}
+.result.v4-issue .v3-scene-axes{
+  grid-column:2/4;grid-row:3;
+  align-self:end;
+  margin-top:clamp(40px,6vw,86px);
+  padding-top:18px
+}
+.result.v4-issue .v3-scene-axes span{font-size:9px}
+
+/* 03 / Decision portrait — turn the old result-grid into one feature spread.
+   The legacy share-preview card is removed because Share Studio owns public output. */
+.result.v4-issue .result-grid{
+  display:block!important;
+  padding:0!important;
+  background:#d7d4cc;
+  border:0!important;
+}
+.result.v4-issue .portrait-section{
+  min-height:min(780px,78svh);
+  padding:clamp(92px,10vw,150px) clamp(20px,7vw,108px)!important;
+  display:grid!important;
+  grid-template-columns:minmax(170px,.42fr) minmax(0,1.2fr);
+  grid-template-rows:auto 1fr;
+  gap:clamp(34px,5vw,86px);
+  align-items:start;
+  border:0!important;
+  background:
+    linear-gradient(90deg,rgba(10,10,9,.035) 1px,transparent 1px) 0 0/72px 72px,
+    #d7d4cc;
+}
+.result.v4-issue .portrait-section>h3{
+  grid-column:1;grid-row:1;
+  margin:0!important;
+  max-width:13ch;
+  font-size:9px!important;
+  line-height:1.45!important;
+  letter-spacing:.13em!important;
+  color:rgba(10,10,9,.48)!important;
+}
+.result.v4-issue .portrait-section .portrait{
+  grid-column:2;grid-row:1/3;
+  max-width:900px;
+  columns:2;
+  column-gap:clamp(36px,5vw,76px);
+  column-rule:1px solid rgba(10,10,9,.12);
+  font-size:clamp(16px,1.25vw,19px);
+  line-height:1.86;
+}
+.result.v4-issue .portrait-section .portrait p{break-inside:avoid;margin-top:0;margin-bottom:1.45em}
+
+/* 04 / Six dimensions — a measurement ledger with a sticky margin note. */
+.result.v4-issue .dims-section{
+  padding:clamp(88px,10vw,150px) clamp(20px,7vw,108px)!important;
+  display:grid!important;
+  grid-template-columns:minmax(170px,.38fr) minmax(0,1.2fr);
+  gap:clamp(34px,6vw,100px);
+  align-items:start;
+  background:#efede6;
+}
+.result.v4-issue .dims-section>h3{
+  position:sticky;top:96px;
+  margin:0!important;
+  font-size:9px!important;
+  line-height:1.45!important;
+  letter-spacing:.13em!important;
+  color:rgba(10,10,9,.48)!important;
+}
+.result.v4-issue .dims-section .dims{width:100%}
+.result.v4-issue .dims-section .dim-row{padding:clamp(20px,2.5vw,34px) 0;border-top-color:rgba(10,10,9,.14)}
+.result.v4-issue .dims-section .dim-row:last-child{border-bottom:1px solid rgba(10,10,9,.14)}
+
+/* 05 / Same-type archive — keep the portraits, remove the card-wall feeling. */
+.result.v4-issue .v4-same-type{
+  padding:clamp(86px,10vw,148px) clamp(20px,7vw,108px)!important;
+  background:#e7e4dc;
+}
+.result.v4-issue .v4-same-type>h3{margin:0 0 clamp(40px,5vw,72px)!important}
+.result.v4-issue .v4-same-type .people{border-top:1px solid rgba(10,10,9,.18);border-bottom:1px solid rgba(10,10,9,.18)}
+.result.v4-issue .v4-same-type .person{border:0!important}
+.result.v4-issue .v4-same-type .person+.person{border-left:1px solid rgba(10,10,9,.16)!important}
+
+/* 06 / Private note — a static typographic insert, not another boxed module. */
+.result.v4-issue .reminder{
+  min-height:64svh;
+  padding:clamp(112px,15vw,220px) clamp(22px,8vw,126px)!important;
+  display:flex!important;
+  align-items:center;
+  background:#0a0a09!important;
+  color:#efede6!important;
+  border:0!important;
+  position:relative;
+}
+.result.v4-issue .reminder>.v4-folio-tag{top:28px;color:rgba(239,237,230,.48)}
+.result.v4-issue .reminder>.v4-folio-tag b{color:var(--tc,#c8ff35)}
+.result.v4-issue .reminder>h3{display:none!important}
+.result.v4-issue .reminder>p{
+  margin:0!important;
+  max-width:18ch;
+  font-family:var(--v3-display-serif,serif)!important;
+  font-size:clamp(42px,5.8vw,82px)!important;
+  font-weight:700;
+  line-height:.98!important;
+  letter-spacing:-.055em!important;
+  color:#efede6!important;
+}
+
+/* 07 / Issue out — Share Studio remains the only public artifact studio. */
+.result.v4-issue .v3-share-studio{
+  padding-top:clamp(92px,10vw,150px);
+  padding-bottom:clamp(92px,10vw,150px);
+  background:
+    linear-gradient(90deg,rgba(10,10,9,.025) 1px,transparent 1px) 0 0/56px 56px,
+    linear-gradient(rgba(10,10,9,.025) 1px,transparent 1px) 0 0/56px 56px,
+    #e8e5dd;
+}
+
+/* Back matter — actions/legal should read like colophon, not another product panel. */
+.result.v4-issue .actions{padding-top:clamp(44px,5vw,70px);border-top:1px solid rgba(10,10,9,.18)}
+.result.v4-issue .legal{margin-top:0;padding-top:24px;border-top:1px solid rgba(10,10,9,.12)}
+
+@media(max-width:980px){
+  .result.v4-issue .result-hero .v4-result-mark{right:20px;width:min(46vw,500px)}
+  .result.v4-issue .v3-scene-card{
+    grid-template-columns:58px minmax(0,.9fr) minmax(0,1.15fr);
+    min-height:min(62vh,520px)
+  }
+  .result.v4-issue .v3-scene-card h3{font-size:clamp(38px,6vw,62px)}
+  .result.v4-issue .portrait-section,.result.v4-issue .dims-section{grid-template-columns:minmax(130px,.34fr) minmax(0,1fr)}
+}
+
+@media(max-width:760px){
+  .result.v4-issue .result-hero{
+    min-height:calc(100svh - 58px)!important;
+    padding:22px 14px 312px!important;
+  }
+  .result.v4-issue .result-hero .v4-result-mark{
+    left:50%;right:auto;top:auto;bottom:28px;
+    width:min(90vw,420px);
+    opacity:.96;
+    transform:translateX(-50%) rotate(-1.8deg)
+  }
+  .result.v4-issue .result-hero .v4-result-mark .v4-weave{height:132px}
+  .result.v4-issue .result-hero .hook{max-width:30ch!important}
+
+  .result.v4-issue .v3-signal-strip{padding-top:68px;padding-left:16px;padding-right:16px}
+  .result.v4-issue .v3-signal-grid{grid-template-columns:1fr 1fr}
+  .result.v4-issue .v3-signal-card{min-height:126px}
+  .result.v4-issue .v3-signal-card:nth-child(odd){border-left:0}
+
+  .result.v4-issue .v4-folio-tag{left:16px;top:13px;font-size:7px}
+  .result.v4-issue .v3-decision-scenes{padding-left:12px!important;padding-right:12px!important;padding-top:64px;padding-bottom:150px}
+  .result.v4-issue .v3-scenes-head{padding-left:4px;padding-right:4px;margin-bottom:36px}
+  .result.v4-issue .v3-scenes-grid{width:100%}
+  .result.v4-issue .v3-scene-card{
+    top:calc(68px + var(--v4-stack-index,0)*11px);
+    min-height:64svh;
+    margin-bottom:18svh;
+    padding:26px 20px 24px;
+    display:grid!important;
+    grid-template-columns:34px minmax(0,1fr)!important;
+    grid-template-rows:auto auto 1fr auto;
+    gap:0 14px;
+    box-shadow:0 -12px 28px rgba(10,10,9,.065)
+  }
+  .result.v4-issue .v3-scene-card::before{right:12px;top:8px;font-size:104px}
+  .result.v4-issue .v3-scene-no{grid-column:1;grid-row:1/5;font-size:8px}
+  .result.v4-issue .v3-scene-card h3{grid-column:2;grid-row:1;font-size:38px;max-width:8ch}
+  .result.v4-issue .v3-scene-card p{grid-column:2;grid-row:2;margin-top:26px!important;font-size:14px;line-height:1.72;max-width:29ch}
+  .result.v4-issue .v3-scene-axes{grid-column:2;grid-row:4;margin-top:30px;padding-top:14px}
+  .result.v4-issue .v3-scene-axes span{font-size:7px}
+
+  .result.v4-issue .portrait-section{
+    min-height:0;
+    padding:82px 18px 74px!important;
+    display:block!important;
+  }
+  .result.v4-issue .portrait-section>h3{margin:0 0 32px!important}
+  .result.v4-issue .portrait-section .portrait{columns:1;font-size:15px;line-height:1.78}
+
+  .result.v4-issue .dims-section{
+    padding:82px 18px 74px!important;
+    display:block!important;
+  }
+  .result.v4-issue .dims-section>h3{position:static;margin:0 0 32px!important}
+  .result.v4-issue .dims-section .dim-row{padding:22px 0}
+
+  .result.v4-issue .v4-same-type{padding:82px 16px 74px!important}
+  .result.v4-issue .v4-same-type .person+.person{border-left:0!important;border-top:1px solid rgba(10,10,9,.16)!important}
+
+  .result.v4-issue .reminder{min-height:58svh;padding:94px 18px 82px!important}
+  .result.v4-issue .reminder>.v4-folio-tag{top:24px;left:18px}
+  .result.v4-issue .reminder>p{font-size:clamp(36px,10vw,54px)!important;max-width:14ch}
+
+  .result.v4-issue .v3-share-studio{padding-top:82px;padding-bottom:82px}
+}
+
+@media(max-width:360px){
+  .result.v4-issue .v3-scene-card{padding-left:16px;padding-right:16px;grid-template-columns:28px 1fr!important}
+  .result.v4-issue .v3-scene-card h3{font-size:34px}
+  .result.v4-issue .reminder>p{font-size:34px!important}
+}
+
+@media(prefers-reduced-motion:reduce){
+  .result.v4-issue .v3-scene-card{scroll-behavior:auto}
+  .result.v4-issue .result-hero .v4-result-mark,.result.v4-issue .result-hero .code,.result.v4-issue .result-hero .identity,.result.v4-issue .result-hero .hook{animation:none!important}
+}
+
+
+/* V4.5b — optical issuance material pass.
+   Reference-driven subtraction: the hero is one dark shot, one lit object, one identity.
+   The exact 18-decision geometry survives as an engraved layer instead of reading like a chart. */
+.result.v4-issue .result-hero{
+  justify-content:center!important;
+  padding-left:clamp(28px,6vw,88px)!important;
+  padding-right:min(40vw,580px)!important;
+  background:
+    radial-gradient(ellipse at 77% 47%,rgba(255,255,255,.085),transparent 22%),
+    linear-gradient(116deg,transparent 0 55%,rgba(255,255,255,.055) 60%,rgba(255,255,255,.012) 65%,transparent 73%),
+    radial-gradient(circle at 73% 52%,color-mix(in srgb,var(--tc) 8%,transparent),transparent 35%),
+    #050505!important;
+}
+.result.v4-issue .result-hero::before{
+  content:""!important;
+  position:absolute!important;
+  inset:-20% -14%!important;
+  z-index:0!important;
+  background:
+    linear-gradient(108deg,transparent 0 48%,rgba(255,255,255,.052) 54%,rgba(255,255,255,.012) 59%,transparent 67%)!important;
+  color:transparent!important;
+  font-size:0!important;
+  opacity:.78;
+  transform:translateX(6%) rotate(-1.5deg);
+  pointer-events:none;
+}
+.result.v4-issue .result-hero::after{
+  content:"";
+  position:absolute;
+  right:-7%;
+  bottom:-17%;
+  width:58%;
+  height:38%;
+  z-index:0;
+  pointer-events:none;
+  background:radial-gradient(ellipse at center,rgba(255,255,255,.09),rgba(255,255,255,.018) 36%,transparent 69%);
+  transform:perspective(700px) rotateX(66deg);
+  filter:blur(8px);
+  opacity:.62;
+}
+.result.v4-issue .result-hero .v4-result-mark{
+  width:min(35vw,500px);
+  aspect-ratio:1.48;
+  right:clamp(20px,3.4vw,56px);
+  top:52%;
+  opacity:.98;
+  overflow:hidden;
+  border:1px solid rgba(244,241,233,.58);
+  border-radius:2px;
+  clip-path:polygon(1.5% 0,100% 2.8%,98.5% 100%,0 97%);
+  background:
+    linear-gradient(113deg,rgba(255,255,255,.58) 0 7%,rgba(255,255,255,.12) 15%,transparent 31%),
+    repeating-linear-gradient(0deg,rgba(10,10,9,.014) 0 1px,transparent 1px 4px),
+    linear-gradient(145deg,#d0ccc2 0%,#f5f1e7 31%,#e9e4da 66%,#bdb8ad 100%);
+  box-shadow:
+    -30px 44px 96px rgba(0,0,0,.62),
+    0 2px 0 rgba(255,255,255,.55) inset,
+    0 -1px 0 rgba(10,10,9,.1) inset;
+  transform:translateY(-50%) perspective(980px) rotateY(-9deg) rotateX(1.6deg) rotateZ(-2.8deg);
+  transform-origin:center;
+  animation:v4-issued-object-arrive .82s cubic-bezier(.16,1,.3,1) both;
+  filter:drop-shadow(-10px 26px 22px rgba(0,0,0,.48));
+}
+.result.v4-issue .result-hero .v4-result-mark::before{
+  width:4px;
+  background:var(--tc,#c8ff35);
+  box-shadow:0 0 14px color-mix(in srgb,var(--tc) 26%,transparent);
+  z-index:6;
+}
+.result.v4-issue .result-hero .v4-result-mark::after{
+  content:"TDNA / PUBLIC ID";
+  right:6.5%;
+  bottom:5.6%;
+  z-index:5;
+  font-size:6px;
+  letter-spacing:.2em;
+  color:rgba(10,10,9,.38);
+}
+.result.v4-issue .v4-result-mark-meta{
+  position:relative;
+  z-index:5;
+  padding:3.8% 5.8% 0;
+  color:rgba(10,10,9,.48);
+}
+.result.v4-issue .v4-result-mark-meta b{color:rgba(10,10,9,.7)}
+.result.v4-issue .v4-issued-face{position:absolute;inset:0;z-index:2;pointer-events:none}
+.result.v4-issue .v4-issued-dna{
+  position:absolute;
+  left:10%;
+  top:24%;
+  font:900 clamp(66px,8vw,122px)/.8 var(--v3-display-sans,sans-serif);
+  letter-spacing:-.08em;
+  color:rgba(10,10,9,.045);
+  -webkit-text-stroke:1px rgba(255,255,255,.28);
+  text-shadow:0 1px 0 rgba(255,255,255,.62),0 -1px 0 rgba(10,10,9,.07);
+}
+.result.v4-issue .v4-issued-id{
+  position:absolute;
+  left:7%;
+  bottom:7%;
+  display:flex;
+  flex-direction:column;
+  gap:2px;
+  color:#0a0a09;
+}
+.result.v4-issue .v4-issued-id b{
+  font:900 clamp(15px,1.45vw,21px)/1 var(--v3-display-sans,sans-serif);
+  letter-spacing:-.045em;
+}
+.result.v4-issue .v4-issued-id span{
+  font:720 clamp(10px,.95vw,14px)/1.1 var(--v3-reading-sans,sans-serif);
+  letter-spacing:-.035em;
+}
+.result.v4-issue .v4-issued-seal{
+  position:absolute;
+  right:7%;
+  top:10%;
+  font:760 6px/1 var(--v3-data-mono,monospace);
+  letter-spacing:.16em;
+  color:rgba(10,10,9,.42);
+}
+.result.v4-issue .result-hero .v4-result-mark .v4-weave{
+  position:absolute;
+  left:7%;
+  top:39%;
+  width:86%;
+  height:28%!important;
+  margin:0;
+  z-index:3;
+  opacity:.27;
+  mix-blend-mode:multiply;
+}
+.result.v4-issue .result-hero .v4-result-mark .v4-weave-path{stroke-width:1.22;opacity:.56}
+.result.v4-issue .result-hero .v4-result-mark .v4-weave-thread{opacity:.075}
+.result.v4-issue .result-hero .v4-result-mark .v4-weave-thread.t-3,
+.result.v4-issue .result-hero .v4-result-mark .v4-weave-thread.t-6{opacity:.12}
+.result.v4-issue .result-hero .v4-result-mark .v4-weave-thread.t-4,
+.result.v4-issue .result-hero .v4-result-mark .v4-weave-thread.t-5{opacity:.18}
+.result.v4-issue .result-hero .v4-result-mark .v4-weave-shadow{opacity:.035}
+@keyframes v4-issued-object-arrive{
+  from{filter:blur(6px) drop-shadow(-8px 18px 18px rgba(0,0,0,.34))}
+  to{filter:blur(0) drop-shadow(-10px 26px 22px rgba(0,0,0,.48))}
+}
+
+@media(max-width:760px){
+  .result.v4-issue .result-hero{
+    min-height:calc(100svh - 54px)!important;
+    align-items:flex-start!important;
+    justify-content:flex-start!important;
+    text-align:left!important;
+    padding:82px 18px 286px!important;
+  }
+  .result.v4-issue .result-hero .result-kicker{margin-top:10px!important}
+  .result.v4-issue .result-hero .code{font-size:clamp(82px,25vw,104px)!important}
+  .result.v4-issue .result-hero .identity{max-width:12ch!important;margin-left:0!important;margin-right:0!important}
+  .result.v4-issue .result-hero .hook{max-width:24ch!important;margin-left:0!important;margin-right:0!important}
+  .result.v4-issue .result-hero .result-foot{width:100%;margin-top:24px!important}
+  .result.v4-issue .result-hero .v4-result-mark{
+    left:auto;
+    right:14px;
+    top:auto;
+    bottom:26px;
+    width:min(78vw,330px);
+    transform:perspective(800px) rotateY(-6deg) rotateX(1deg) rotateZ(-2deg);
+  }
+  .result.v4-issue .result-hero .v4-result-mark .v4-weave{top:40%;height:27%!important}
+  .result.v4-issue .v4-issued-dna{font-size:clamp(58px,18vw,78px)}
+  .result.v4-issue .v4-issued-id b{font-size:13px}
+  .result.v4-issue .v4-issued-id span{font-size:9px}
+  .result.v4-issue .result-hero::before{opacity:.56;transform:translateX(16%) rotate(-4deg)}
+  .result.v4-issue .result-hero::after{right:-18%;bottom:-13%;width:92%;height:30%;opacity:.44}
+}
+@media(max-width:360px){
+  .result.v4-issue .result-hero{padding-bottom:262px!important}
+  .result.v4-issue .result-hero .v4-result-mark{width:82vw;right:8px;bottom:20px}
+}
+@media(prefers-reduced-motion:reduce){
+  .result.v4-issue .result-hero .v4-result-mark{animation:none!important}
+}
+
+
+/* V4.6 — Share Artifact becomes the approved floating Identity Plate scene. */
+.result.v4-issue .v3-share-studio{
+  min-height:min(92svh,980px);
+  align-content:center;
+  border-top-color:rgba(255,255,255,.09)!important;
+  background:
+    linear-gradient(116deg,transparent 0 56%,rgba(255,244,219,.075) 63%,transparent 75%),
+    radial-gradient(ellipse at 76% 17%,rgba(255,238,199,.16),transparent 28%),
+    radial-gradient(ellipse at 66% 86%,rgba(255,220,154,.13),transparent 30%),
+    radial-gradient(ellipse at 54% 70%,color-mix(in srgb,var(--tc,#c8ff35) 5%,transparent),transparent 34%),
+    #050505!important;
+  color:#f2eee5;
+  overflow:hidden;
+  position:relative;
+}
+.result.v4-issue .v3-share-studio::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  background:
+    linear-gradient(90deg,rgba(255,255,255,.018) 1px,transparent 1px) 0 0/58px 58px,
+    linear-gradient(rgba(255,255,255,.014) 1px,transparent 1px) 0 0/58px 58px;
+  mask-image:linear-gradient(to bottom,transparent,black 16%,black 82%,transparent);
+}
+.result.v4-issue .v3-share-studio-copy,
+.result.v4-issue .v3-share-stage,
+.result.v4-issue .v3-share-tools{position:relative;z-index:1}
+.result.v4-issue .v3-share-studio-copy>span{color:rgba(242,238,229,.48)!important}
+.result.v4-issue .v3-share-studio-copy h3{
+  color:#f2eee5!important;
+  max-width:10.5ch!important;
+}
+.result.v4-issue .v3-share-studio-copy p{color:rgba(242,238,229,.62)!important}
+.result.v4-issue .v3-share-formats button{
+  border-color:rgba(242,238,229,.28)!important;
+  color:rgba(242,238,229,.62)!important;
+}
+.result.v4-issue .v3-share-formats button.is-active{
+  background:#f2eee5!important;
+  color:#080808!important;
+}
+.result.v4-issue .v3-share-generate{
+  background:#f2eee5!important;
+  color:#080808!important;
+  border-color:#f2eee5!important;
+}
+.result.v4-issue .v3-share-native{
+  background:transparent!important;
+  color:#f2eee5!important;
+  border-color:rgba(242,238,229,.7)!important;
+}
+.result.v4-issue .v3-share-tools span{color:rgba(242,238,229,.44)!important}
+.result.v4-issue .v3-share-stage{
+  width:min(100%,500px);
+  border:1px solid rgba(255,245,224,.12)!important;
+  background:#050505!important;
+  box-shadow:
+    -24px 34px 86px rgba(0,0,0,.56),
+    0 0 54px rgba(255,225,174,.06)!important;
+  transform:perspective(1000px) rotateY(-3.2deg) rotateZ(-1.35deg);
+  transform-origin:58% 52%;
+  transition:transform .28s var(--v3-ease,ease),box-shadow .28s ease,aspect-ratio .24s var(--v3-ease,ease)!important;
+}
+.result.v4-issue .v3-share-studio[data-format="9:16"] .v3-share-stage{width:min(100%,410px)}
+.result.v4-issue .v3-share-stage:hover{
+  transform:perspective(1000px) translateY(-8px) rotateY(-1.6deg) rotateZ(-.55deg)!important;
+  box-shadow:-28px 44px 96px rgba(0,0,0,.62),0 0 64px rgba(255,225,174,.085)!important;
+}
+.result.v4-issue .v3-share-stage::after{display:none!important}
+.result.v4-issue .v3-share-stage img{
+  object-fit:cover!important;
+  background:#050505!important;
+}
+.result.v4-issue .v3-share-placeholder{
+  color:#f2eee5!important;
+  background:
+    radial-gradient(circle at 72% 22%,rgba(255,235,195,.08),transparent 32%),
+    #050505;
+}
+.result.v4-issue .v3-share-placeholder::before{color:rgba(242,238,229,.045)!important}
+.result.v4-issue .v3-share-placeholder span{color:rgba(242,238,229,.42)!important}
+.result.v4-issue .v3-share-stage[aria-busy="true"]::before{color:rgba(242,238,229,.66)!important}
+
+@media(max-width:760px){
+  .result.v4-issue .v3-share-studio{
+    min-height:0;
+    padding-top:92px!important;
+    padding-bottom:96px!important;
+  }
+  .result.v4-issue .v3-share-stage{
+    width:min(92vw,430px)!important;
+    transform:perspective(900px) rotateY(-2deg) rotateZ(-1deg);
+  }
+  .result.v4-issue .v3-share-studio[data-format="9:16"] .v3-share-stage{width:min(82vw,360px)!important}
+}
+@media(prefers-reduced-motion:reduce){
+  .result.v4-issue .v3-share-stage,
+  .result.v4-issue .v3-share-stage:hover{
+    transform:rotate(-1deg)!important;
+    transition:none!important;
+  }
+}
+
+
+/* V4.7 — layered identity system.
+   Inspired by physical flash-card depth: backboard -> issued plate -> foreground signal rail.
+   No second M2; this is one restrained M1 material interaction. */
+.result.v4-issue .result-hero .v47-identity-stack{
+  --v47-rx:0deg;
+  --v47-ry:0deg;
+  --v47-px:0px;
+  --v47-py:0px;
+  position:absolute;
+  right:clamp(20px,3.2vw,54px);
+  top:52%;
+  width:min(38vw,540px);
+  aspect-ratio:1.18;
+  z-index:2;
+  perspective:1200px;
+  transform-style:preserve-3d;
+  transform:translateY(-50%) rotateX(var(--v47-rx)) rotateY(var(--v47-ry));
+  transition:transform .18s cubic-bezier(.22,.8,.22,1);
+  pointer-events:auto;
+}
+.result.v4-issue .v47-identity-back{
+  position:absolute;
+  inset:1% 7% 13% 2%;
+  z-index:0;
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-end;
+  padding:7% 7.5%;
+  color:#f2eee5;
+  background:
+    linear-gradient(132deg,rgba(255,255,255,.055),transparent 26% 72%,rgba(255,255,255,.025)),
+    #0b0b0a;
+  border:1px solid rgba(242,238,229,.16);
+  box-shadow:0 34px 80px rgba(0,0,0,.46);
+  transform:
+    translate3d(calc(var(--v47-px) * -.28),calc(var(--v47-py) * -.28),-44px)
+    rotateZ(4.2deg)
+    rotateY(4deg);
+  transform-origin:center;
+  overflow:hidden;
+}
+.result.v4-issue .v47-identity-back::before{
+  content:"";
+  position:absolute;
+  inset:-15%;
+  background:
+    radial-gradient(circle at 72% 20%,color-mix(in srgb,var(--tc,#c8ff35) 11%,transparent),transparent 25%),
+    linear-gradient(112deg,transparent 0 58%,rgba(255,255,255,.06) 62%,transparent 70%);
+}
+.result.v4-issue .v47-identity-back span{
+  position:absolute;
+  left:7.5%;top:7%;
+  font:720 6px/1 var(--v3-data-mono,monospace);
+  letter-spacing:.18em;
+  color:rgba(242,238,229,.46);
+}
+.result.v4-issue .v47-identity-back b{
+  position:relative;
+  font:900 clamp(74px,8.7vw,132px)/.78 var(--v3-display-sans,sans-serif);
+  letter-spacing:-.09em;
+  color:rgba(242,238,229,.12);
+}
+.result.v4-issue .v47-identity-back em{
+  position:relative;
+  margin-top:8px;
+  font:760 clamp(12px,1.1vw,16px)/1 var(--v3-reading-sans,sans-serif);
+  font-style:normal;
+  letter-spacing:-.035em;
+  color:rgba(242,238,229,.68);
+}
+.result.v4-issue .v47-identity-plate{
+  position:absolute;
+  inset:10% 2% 6% 10%;
+  z-index:2;
+  transform-style:preserve-3d;
+  transform:
+    translate3d(calc(var(--v47-px) * .15),calc(var(--v47-py) * .15),42px)
+    rotateY(-7deg)
+    rotateX(1.2deg)
+    rotateZ(-2.2deg);
+  filter:drop-shadow(-18px 28px 28px rgba(0,0,0,.42));
+}
+.result.v4-issue .v47-identity-plate .v4-result-mark{
+  position:relative!important;
+  inset:auto!important;
+  right:auto!important;
+  left:auto!important;
+  top:auto!important;
+  bottom:auto!important;
+  width:100%!important;
+  height:100%;
+  aspect-ratio:auto!important;
+  transform:none!important;
+  transform-origin:center!important;
+  clip-path:polygon(1.5% 0,100% 2.8%,98.5% 100%,0 97%)!important;
+  filter:none!important;
+  box-shadow:
+    -24px 34px 74px rgba(0,0,0,.42),
+    0 2px 0 rgba(255,255,255,.55) inset,
+    0 -1px 0 rgba(10,10,9,.1) inset!important;
+}
+.result.v4-issue .v47-identity-front{
+  position:absolute;
+  inset:0;
+  z-index:4;
+  pointer-events:none;
+  transform:translate3d(calc(var(--v47-px) * .55),calc(var(--v47-py) * .55),82px);
+}
+.result.v4-issue .v47-identity-chip{
+  position:absolute;
+  right:-1%;
+  top:13%;
+  padding:9px 13px 8px;
+  background:#f1ece2;
+  color:#0a0a09;
+  border:1px solid rgba(255,255,255,.52);
+  box-shadow:0 18px 36px rgba(0,0,0,.24);
+  font:780 7px/1 var(--v3-data-mono,monospace);
+  letter-spacing:.15em;
+  transform:rotate(2.4deg);
+}
+.result.v4-issue .v47-identity-rail{
+  position:absolute;
+  left:2%;
+  right:5%;
+  bottom:0;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  background:rgba(8,8,8,.95);
+  color:#f2eee5;
+  border:1px solid rgba(242,238,229,.15);
+  box-shadow:-12px 20px 42px rgba(0,0,0,.32);
+  transform:rotate(-.7deg);
+}
+.result.v4-issue .v47-identity-rail>div{
+  min-width:0;
+  padding:12px 13px 11px;
+}
+.result.v4-issue .v47-identity-rail>div+div{border-left:1px solid rgba(242,238,229,.13)}
+.result.v4-issue .v47-identity-rail i{
+  display:block;
+  margin-bottom:7px;
+  font:700 6px/1 var(--v3-data-mono,monospace);
+  font-style:normal;
+  letter-spacing:.14em;
+  color:var(--tc,#c8ff35);
+}
+.result.v4-issue .v47-identity-rail b{
+  display:block;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+  font:780 clamp(10px,.9vw,13px)/1.05 var(--v3-reading-sans,sans-serif);
+}
+.result.v4-issue .v47-identity-rail span{
+  display:block;
+  margin-top:5px;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+  font:650 5px/1 var(--v3-data-mono,monospace);
+  letter-spacing:.1em;
+  color:rgba(242,238,229,.46);
+}
+
+/* The live share preview inherits the same three-layer grammar. */
+.result.v4-issue .v3-share-stage{
+  --v47-rx:0deg;
+  --v47-ry:0deg;
+  --v47-px:0px;
+  --v47-py:0px;
+  perspective:1200px;
+  transform-style:preserve-3d;
+  overflow:visible!important;
+  isolation:isolate;
+  transform:rotateX(var(--v47-rx)) rotateY(var(--v47-ry)) rotateZ(-1deg)!important;
+}
+.result.v4-issue .v3-share-stage .v47-share-back{
+  position:absolute;
+  inset:7% 4% -4% 8%;
+  z-index:0;
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-end;
+  padding:6%;
+  background:#11100e;
+  border:1px solid rgba(242,238,229,.12);
+  color:rgba(242,238,229,.2);
+  box-shadow:0 28px 64px rgba(0,0,0,.42);
+  transform:translate3d(calc(var(--v47-px) * -.24),calc(var(--v47-py) * -.24),-36px) rotate(3.5deg);
+}
+.result.v4-issue .v3-share-stage .v47-share-back span{
+  position:absolute;top:5%;left:6%;
+  font:700 6px/1 var(--v3-data-mono,monospace);
+  letter-spacing:.16em;color:rgba(242,238,229,.34)
+}
+.result.v4-issue .v3-share-stage .v47-share-back b{
+  font:900 clamp(48px,6vw,86px)/.8 var(--v3-display-sans,sans-serif);
+  letter-spacing:-.08em
+}
+.result.v4-issue .v3-share-stage img,
+.result.v4-issue .v3-share-stage .v3-share-placeholder{
+  position:absolute!important;
+  inset:0!important;
+  width:100%!important;
+  height:100%!important;
+  z-index:2!important;
+  transform:translate3d(calc(var(--v47-px) * .14),calc(var(--v47-py) * .14),34px) rotate(-1.2deg);
+  box-shadow:-18px 30px 70px rgba(0,0,0,.46);
+}
+.result.v4-issue .v3-share-stage .v47-share-front{
+  position:absolute;
+  right:-5%;
+  top:18%;
+  z-index:5;
+  padding:10px 13px 9px;
+  background:#f1ece2;
+  color:#0a0a09;
+  border:1px solid rgba(255,255,255,.55);
+  box-shadow:0 16px 32px rgba(0,0,0,.26);
+  font:780 6px/1 var(--v3-data-mono,monospace);
+  letter-spacing:.13em;
+  transform:translate3d(calc(var(--v47-px) * .58),calc(var(--v47-py) * .58),76px) rotate(2deg);
+}
+.result.v4-issue .v3-share-stage:hover{
+  transform:translateY(-6px) rotateX(var(--v47-rx)) rotateY(var(--v47-ry)) rotateZ(-.5deg)!important;
+}
+
+@media(max-width:980px){
+  .result.v4-issue .result-hero .v47-identity-stack{width:min(43vw,480px);right:16px}
+}
+@media(max-width:760px){
+  .result.v4-issue .result-hero{
+    padding-bottom:350px!important;
+  }
+  .result.v4-issue .result-hero .v47-identity-stack{
+    left:6vw;
+    right:auto;
+    top:auto;
+    bottom:22px;
+    width:min(88vw,360px);
+    aspect-ratio:1.08;
+    transform:rotateX(0deg) rotateY(0deg);
+    pointer-events:none;
+  }
+  .result.v4-issue .v47-identity-back{inset:4% 6% 14% 3%;transform:rotate(3.2deg)}
+  .result.v4-issue .v47-identity-plate{inset:9% 2% 8% 8%;transform:rotateY(-4deg) rotateZ(-1.8deg)}
+  .result.v4-issue .v47-identity-front{transform:none}
+  .result.v4-issue .v47-identity-chip{right:0;top:11%;font-size:5px;padding:8px 10px 7px}
+  .result.v4-issue .v47-identity-rail{left:1%;right:2%;bottom:0}
+  .result.v4-issue .v47-identity-rail>div{padding:9px 9px 8px}
+  .result.v4-issue .v47-identity-rail b{font-size:10px}
+  .result.v4-identity-rail span{font-size:4px}
+  .result.v4-issue .v3-share-stage .v47-share-front{right:-2%;font-size:5px}
+}
+@media(prefers-reduced-motion:reduce){
+  .result.v4-issue .result-hero .v47-identity-stack,
+  .result.v4-issue .v3-share-stage{
+    transform:none!important;
+    transition:none!important;
+  }
+  .result.v4-issue .v47-identity-back,
+  .result.v4-issue .v47-identity-plate,
+  .result.v4-issue .v47-identity-front,
+  .result.v4-issue .v3-share-stage .v47-share-back,
+  .result.v4-issue .v3-share-stage img,
+  .result.v4-issue .v3-share-stage .v3-share-placeholder,
+  .result.v4-issue .v3-share-stage .v47-share-front{
+    transform:none!important;
+  }
+}
+
+
+/* V4.8B — publish transformation.
+   One M1 only: issued layered object -> isolated plate -> flat published PNG.
+   The image is already the canonical V4.8A artifact; CSS only reveals more of it. */
+.result.v4-issue .v3-share-studio .v3-share-formats,
+.result.v4-issue .v3-share-studio .v3-share-tools{
+  transition:opacity .24s ease,transform .24s cubic-bezier(.22,.8,.22,1);
+}
+.result.v4-issue .v3-share-studio:not([data-v48-publish="published"]) .v3-share-formats,
+.result.v4-issue .v3-share-studio:not([data-v48-publish="published"]) .v3-share-tools{
+  opacity:0;
+  visibility:hidden;
+  pointer-events:none;
+  transform:translateY(8px);
+}
+.result.v4-issue .v3-share-studio[data-v48-publish="published"] .v3-share-formats,
+.result.v4-issue .v3-share-studio[data-v48-publish="published"] .v3-share-tools{
+  opacity:1;
+  visibility:visible;
+  pointer-events:auto;
+  transform:none;
+  transition-delay:.08s;
+}
+.result.v4-issue .v3-share-generate:disabled{cursor:default;opacity:.66}
+
+.result.v4-issue .v3-share-stage .v47-share-back,
+.result.v4-issue .v3-share-stage .v47-share-front{
+  transition:
+    opacity .26s ease,
+    transform .34s cubic-bezier(.22,.8,.22,1),
+    filter .34s ease;
+}
+.result.v4-issue .v3-share-stage img{
+  clip-path:inset(15.19% 8.89% 38.89% 8.89% round 1px);
+  transform:
+    translate3d(calc(var(--v47-px) * .14),calc(var(--v47-py) * .14),34px)
+    rotate(-1.2deg)
+    scale(1.025)!important;
+  transform-origin:center;
+  box-shadow:-18px 30px 70px rgba(0,0,0,.46);
+  transition:
+    opacity .22s ease,
+    clip-path .68s cubic-bezier(.16,1,.3,1),
+    transform .68s cubic-bezier(.16,1,.3,1),
+    box-shadow .68s ease!important;
+}
+.result.v4-issue .v3-share-studio[data-format="9:16"] .v3-share-stage img{
+  clip-path:inset(16.41% 8.33% 49.22% 8.33% round 1px);
+  transform:
+    translate3d(calc(var(--v47-px) * .14),calc(var(--v47-py) * .14),34px)
+    translateY(7%)
+    rotate(-1deg)
+    scale(1.03)!important;
+}
+
+.result.v4-issue .v3-share-stage[data-v48-publish="preparing"]{
+  --v47-rx:0deg!important;
+  --v47-ry:0deg!important;
+  --v47-px:0px!important;
+  --v47-py:0px!important;
+  transform:rotateX(0deg) rotateY(0deg) rotateZ(-.7deg)!important;
+  pointer-events:none;
+}
+.result.v4-issue .v3-share-stage[data-v48-publish="isolated"]{
+  --v47-rx:0deg!important;
+  --v47-ry:0deg!important;
+  --v47-px:0px!important;
+  --v47-py:0px!important;
+  transform:rotateX(0deg) rotateY(0deg) rotateZ(-.3deg)!important;
+  pointer-events:none;
+}
+.result.v4-issue .v3-share-stage[data-v48-publish="isolated"] .v47-share-back,
+.result.v4-issue .v3-share-stage[data-v48-publish="flattening"] .v47-share-back,
+.result.v4-issue .v3-share-stage[data-v48-publish="published"] .v47-share-back{
+  opacity:0;
+  filter:blur(4px);
+  transform:translate3d(-8%,7%,-56px) rotate(5deg) scale(.96);
+}
+.result.v4-issue .v3-share-stage[data-v48-publish="isolated"] .v47-share-front,
+.result.v4-issue .v3-share-stage[data-v48-publish="flattening"] .v47-share-front,
+.result.v4-issue .v3-share-stage[data-v48-publish="published"] .v47-share-front{
+  opacity:0;
+  filter:blur(3px);
+  transform:translate3d(12%,-8%,76px) rotate(4deg) scale(.96);
+}
+.result.v4-issue .v3-share-stage[data-v48-publish="flattening"],
+.result.v4-issue .v3-share-stage[data-v48-publish="published"]{
+  --v47-rx:0deg!important;
+  --v47-ry:0deg!important;
+  --v47-px:0px!important;
+  --v47-py:0px!important;
+  transform:none!important;
+  overflow:hidden!important;
+  pointer-events:none;
+  box-shadow:0 24px 70px rgba(0,0,0,.34)!important;
+  border-color:rgba(243,238,228,.18)!important;
+}
+.result.v4-issue .v3-share-stage[data-v48-publish="flattening"] img,
+.result.v4-issue .v3-share-stage[data-v48-publish="published"] img,
+.result.v4-issue .v3-share-studio[data-format="9:16"] .v3-share-stage[data-v48-publish="flattening"] img,
+.result.v4-issue .v3-share-studio[data-format="9:16"] .v3-share-stage[data-v48-publish="published"] img{
+  clip-path:inset(0 round 0);
+  transform:none!important;
+  box-shadow:none!important;
+}
+.result.v4-issue .v3-share-stage[data-v48-publish="published"]:hover{
+  transform:none!important;
+  box-shadow:0 24px 70px rgba(0,0,0,.34)!important;
+}
+
+@media(prefers-reduced-motion:reduce){
+  .result.v4-issue .v3-share-studio .v3-share-formats,
+  .result.v4-issue .v3-share-studio .v3-share-tools,
+  .result.v4-issue .v3-share-stage .v47-share-back,
+  .result.v4-issue .v3-share-stage .v47-share-front,
+  .result.v4-issue .v3-share-stage img{
+    transition:none!important;
+  }
+}
+
+
+/* V4.8F — final Share Studio subtraction.
+   The published artifact leads; explanatory copy becomes support. Desktop only. */
+@media(min-width:981px){
+  .result.v4-issue .v3-share-studio{
+    grid-template-columns:minmax(280px,.62fr) minmax(500px,1.18fr);
+    column-gap:clamp(48px,5.5vw,92px);
+  }
+  .result.v4-issue .v3-share-studio-copy{
+    max-width:470px;
+  }
+  .result.v4-issue .v3-share-studio-copy h3{
+    max-width:12ch!important;
+    font-size:clamp(38px,3.75vw,56px)!important;
+    line-height:.93!important;
+  }
+  .result.v4-issue .v3-share-studio-copy p{
+    max-width:40ch;
+  }
+  .result.v4-issue .v3-share-stage{
+    width:min(100%,560px);
+    justify-self:end;
+  }
+  .result.v4-issue .v3-share-studio[data-format="9:16"] .v3-share-stage{
+    width:min(100%,430px);
+  }
+}

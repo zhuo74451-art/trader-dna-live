@@ -1,0 +1,57 @@
+/*
+  V3 motion timing contract.
+
+  Important implementation note:
+  visual-v3.css intentionally established hard hidden states with `opacity:0!important`.
+  CSS animations cannot override an !important opacity declaration, so V3 reveal motion
+  uses geometric masks (clip-path), blur and scale instead of trying to animate opacity.
+
+  Product contract remains:
+  - semantic DNA must be visually locked by ~1.65s;
+  - WebGL matter can keep settling until the ~2.4s scene cut;
+  - Chinese identity lands after the DNA, not before it.
+*/
+.reveal-code{
+  opacity:1!important;
+  clip-path:inset(0 50% 0 50%);
+  filter:blur(18px);
+  transform:scale(.90);
+  animation:v3-code-mask 2.10s cubic-bezier(.16,1,.3,1) forwards!important;
+}
+.reveal-name{
+  opacity:1!important;
+  clip-path:inset(100% 0 0 0);
+  transform:translateY(12px);
+  animation:v3-name-mask 2.24s cubic-bezier(.16,1,.3,1) forwards!important;
+}
+.reveal-label{
+  opacity:1!important;
+  clip-path:inset(0 100% 0 0);
+  animation:v3-label-mask 2.24s cubic-bezier(.16,1,.3,1) forwards!important;
+}
+
+@keyframes v3-code-mask{
+  0%,50%{clip-path:inset(0 50% 0 50%);filter:blur(18px);transform:scale(.90)}
+  59%{clip-path:inset(0 34% 0 34%);filter:blur(10px);transform:scale(.95)}
+  68%{clip-path:inset(0 3% 0 3%);filter:blur(.7px);transform:scale(1.035)}
+  76%,100%{clip-path:inset(0 0 0 0);filter:none;transform:scale(1)}
+}
+@keyframes v3-name-mask{
+  0%,69%{clip-path:inset(100% 0 0 0);transform:translateY(12px)}
+  82%{clip-path:inset(18% 0 0 0);transform:translateY(2px)}
+  92%,100%{clip-path:inset(0 0 0 0);transform:none}
+}
+@keyframes v3-label-mask{
+  0%,64%{clip-path:inset(0 100% 0 0)}
+  86%,100%{clip-path:inset(0 0 0 0)}
+}
+
+@media(prefers-reduced-motion:reduce){
+  .reveal-code,.reveal-name,.reveal-label{
+    animation:none!important;
+    opacity:1!important;
+    clip-path:none!important;
+    filter:none!important;
+    transform:none!important;
+  }
+}

@@ -1,0 +1,373 @@
+/* V3 refinement pass — typography, SCAN 01 process, editorial portrait archive. */
+
+:root{
+  --v3-display-sans:"Helvetica Neue","Arial Narrow","Aptos Display","PingFang TC","Noto Sans TC",Arial,sans-serif;
+  --v3-reading-sans:"PingFang TC","Noto Sans TC","Microsoft JhengHei","Helvetica Neue",Arial,sans-serif;
+  --v3-display-serif:"Songti TC","Noto Serif TC","PMingLiU","Times New Roman",serif;
+  --v3-data-mono:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono",monospace;
+}
+
+/* 01 / Typography — display, reading and instrument are visibly different roles. */
+body{font-family:var(--v3-reading-sans)!important;font-kerning:normal;text-rendering:optimizeLegibility}
+.brand{font-family:var(--v3-display-sans)!important;font-weight:850!important;letter-spacing:-.035em!important}
+.brand span,.status,.kicker,.hero-meta,.v3-object-label,.v3-vector-meta,.question-index,.scan,.count,.reveal-meta,.v3-reveal-caption,.dossier-head,.result-foot,.section h3,.share-brand,.share-foot,.legal{font-family:var(--v3-data-mono)!important}
+
+.hero h1{
+  font-family:var(--v3-display-sans)!important;
+  font-weight:900!important;
+  letter-spacing:-.075em!important;
+  line-height:.82!important;
+  text-wrap:balance;
+}
+.hero h1 em{
+  font-family:var(--v3-display-serif)!important;
+  font-weight:700!important;
+  letter-spacing:-.055em!important;
+  color:var(--v3-ink)!important;
+  -webkit-text-stroke:0!important;
+  text-stroke:0!important;
+  transform:translateX(clamp(10px,3vw,44px))!important;
+  opacity:.9;
+}
+.hero-copy,.transition p,.portrait,.person,.reminder p,.hook,.opt-text{font-family:var(--v3-reading-sans)!important}
+.question{
+  font-family:var(--v3-reading-sans)!important;
+  font-weight:720!important;
+  line-height:1.09!important;
+  letter-spacing:-.055em!important;
+  text-wrap:balance;
+}
+.identity{
+  font-family:var(--v3-display-serif)!important;
+  font-weight:700!important;
+  letter-spacing:-.045em!important;
+}
+.code,.share-code,.reveal-code{font-family:var(--v3-display-sans)!important;font-weight:900!important;letter-spacing:-.075em!important}
+
+/* 02 / Assessment process — replace decorative slash accumulation with an answer waveform. */
+.quiz-wrap{position:relative!important;isolation:isolate;overflow:hidden}
+.quiz-wrap::before{
+  content:attr(data-refine-q);
+  position:absolute;
+  right:clamp(8px,2.4vw,36px);
+  top:clamp(90px,10vw,132px);
+  z-index:-1;
+  font:900 clamp(126px,20vw,260px)/.72 var(--v3-display-sans);
+  letter-spacing:-.11em;
+  color:rgba(10,10,9,.028);
+  pointer-events:none;
+}
+.v3-answer-vector{display:none!important}
+.v3-process-rail{
+  display:grid;
+  grid-template-columns:minmax(120px,180px) minmax(0,1fr);
+  gap:clamp(18px,3vw,38px);
+  align-items:end;
+  padding:18px 0 24px;
+  border-bottom:1px solid rgba(10,10,9,.16);
+}
+.v3-process-copy{
+  font:700 8px/1.35 var(--v3-data-mono);
+  letter-spacing:.15em;
+  color:rgba(10,10,9,.42);
+}
+.v3-process-copy span,.v3-process-copy b{display:block}
+.v3-process-copy b{margin-top:5px;color:var(--v3-ink);font-size:10px;letter-spacing:.08em}
+.v3-process-tape{
+  position:relative;
+  display:grid;
+  grid-template-columns:repeat(18,minmax(0,1fr));
+  gap:clamp(2px,.42vw,7px);
+  height:58px;
+  align-items:center;
+}
+.v3-process-tape::before{
+  content:"";
+  position:absolute;
+  left:0;right:0;top:50%;height:1px;
+  background:rgba(10,10,9,.18);
+}
+.v3-process-cell{
+  position:relative;
+  height:100%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.v3-process-cell::before{
+  content:"";
+  width:clamp(3px,.48vw,7px);
+  height:6px;
+  background:rgba(10,10,9,.1);
+  transition:height .26s var(--v3-ease),transform .26s var(--v3-ease),background .18s ease,opacity .18s ease;
+}
+.v3-process-cell.is-a::before,
+.v3-process-cell.is-b::before{
+  height:clamp(22px,3.5vw,38px);
+  background:var(--v3-ink);
+  box-shadow:0 0 0 1px rgba(10,10,9,.02);
+}
+.v3-process-cell.is-a::before{transform:translateY(-25%)}
+.v3-process-cell.is-b::before{transform:translateY(25%)}
+.v3-process-cell.is-current::after{
+  content:"";
+  position:absolute;
+  left:50%;top:50%;
+  width:10px;height:10px;
+  border:1px solid var(--v3-ink);
+  transform:translate(-50%,-50%) rotate(45deg);
+  background:var(--v3-paper);
+}
+.v3-process-cell[data-anchor] span{
+  position:absolute;
+  bottom:-16px;
+  left:50%;
+  transform:translateX(-50%);
+  font:700 7px/1 var(--v3-data-mono);
+  letter-spacing:.05em;
+  color:rgba(10,10,9,.32);
+}
+.quiz-stage{position:relative!important}
+.question-index{
+  font-size:9px!important;
+  letter-spacing:.17em!important;
+  color:rgba(10,10,9,.42)!important;
+  margin-bottom:16px!important;
+}
+.option{position:relative!important;overflow:hidden}
+.option::before{
+  content:"";
+  position:absolute;
+  left:0;top:0;bottom:0;
+  width:0;
+  background:var(--v3-ink);
+  opacity:.045;
+  transition:width .32s var(--v3-ease);
+}
+.option:hover::before,.option:focus-visible::before{width:100%}
+.option.selected::before{width:100%;opacity:1}
+.option>*{position:relative;z-index:1}
+
+/* 03 / Same-type people — editorial portrait archive, not profile avatars. */
+.people{gap:1px!important}
+.person{
+  padding:0!important;
+  display:grid!important;
+  grid-template-columns:minmax(132px,34%) minmax(0,1fr)!important;
+  min-height:260px;
+  align-items:stretch;
+  overflow:hidden;
+}
+.v3-person-portrait{
+  margin:0;
+  position:relative;
+  min-height:260px;
+  overflow:hidden;
+  background:#d9d6ce;
+  border-right:1px solid rgba(10,10,9,.13);
+}
+.v3-person-portrait::before{
+  content:"";
+  position:absolute;
+  left:0;top:0;bottom:0;
+  width:3px;
+  z-index:4;
+  background:var(--tc,#0a0a09);
+  opacity:.9;
+}
+.v3-person-portrait::after{
+  content:"";
+  position:absolute;inset:0;
+  pointer-events:none;
+  background:linear-gradient(180deg,rgba(255,255,255,.08),transparent 38%,rgba(10,10,9,.08)),repeating-linear-gradient(90deg,transparent 0 12px,rgba(255,255,255,.025) 12px 13px);
+  mix-blend-mode:multiply;
+}
+.v3-person-index{
+  position:absolute;
+  left:12px;top:11px;
+  z-index:5;
+  font:750 8px/1 var(--v3-data-mono);
+  letter-spacing:.14em;
+  color:rgba(255,255,255,.78);
+  text-shadow:0 1px 6px rgba(0,0,0,.46);
+}
+.v3-person-portrait img{
+  width:100%;height:100%;display:block;object-fit:cover;object-position:center 23%;
+  opacity:0;
+  filter:grayscale(1) contrast(1.08) sepia(.07);
+  transform:scale(1.015);
+  transition:opacity .22s ease,filter .35s ease,transform .6s var(--v3-ease);
+}
+.v3-person-portrait.has-image img{opacity:1}
+.person:hover .v3-person-portrait.has-image img{filter:grayscale(.82) contrast(1.1) sepia(.04);transform:scale(1.04)}
+.v3-person-portrait[data-person="Jeff Bezos"] img{object-position:center 16%}
+.v3-person-portrait[data-person="Philip Fisher"] img{object-position:center 12%}
+.v3-person-fallback{
+  position:absolute;inset:0;
+  display:flex;flex-direction:column;align-items:flex-start;justify-content:flex-end;
+  padding:18px 16px 16px;
+  color:rgba(10,10,9,.42);
+  background:
+    radial-gradient(circle at 50% 42%,rgba(255,255,255,.28),transparent 30%),
+    linear-gradient(145deg,rgba(255,255,255,.26),transparent 42%),
+    #d9d6ce;
+  transition:opacity .18s ease;
+}
+.v3-person-fallback::before{
+  content:"";
+  position:absolute;
+  left:18%;right:18%;top:20%;bottom:23%;
+  border:1px solid rgba(10,10,9,.12);
+  border-radius:50% 50% 44% 44%;
+}
+.v3-person-fallback span{
+  position:absolute;left:14px;top:14px;
+  font:700 6px/1 var(--v3-data-mono);
+  letter-spacing:.18em;color:rgba(10,10,9,.34)
+}
+.v3-person-fallback b{
+  position:relative;
+  font:850 clamp(34px,4vw,62px)/.82 var(--v3-display-sans);
+  letter-spacing:-.07em;
+  color:rgba(10,10,9,.22)
+}
+.v3-person-fallback small{
+  position:relative;margin-top:8px;
+  font:700 5px/1 var(--v3-data-mono);
+  letter-spacing:.14em;color:rgba(10,10,9,.34)
+}
+.v3-person-portrait.has-image .v3-person-fallback{opacity:0}
+.v3-person-portrait.is-fallback img{filter:grayscale(1) contrast(1.02)!important;transform:none!important}
+.v3-person-portrait.is-fallback:hover img{filter:grayscale(1) contrast(1.02)!important;transform:none!important}
+.v3-person-copy{padding:clamp(26px,3.2vw,48px);display:flex;flex-direction:column;justify-content:center;min-width:0}
+.v3-person-name{font-family:var(--v3-display-sans);font-size:clamp(18px,1.75vw,27px);font-weight:720;line-height:1.12;letter-spacing:-.035em;color:var(--v3-ink)}
+.v3-person-name small{display:block;margin-top:7px;font:650 9px/1.2 var(--v3-data-mono);letter-spacing:.12em;color:rgba(10,10,9,.42)}
+.v3-person-desc{margin-top:24px;font-size:clamp(14px,1.15vw,17px);line-height:1.72;color:rgba(10,10,9,.64)}
+.v3-person-source{position:absolute;left:10px;bottom:8px;z-index:2;font:650 6px/1 var(--v3-data-mono);letter-spacing:.08em;color:rgba(255,255,255,.7);text-shadow:0 1px 5px rgba(0,0,0,.45);opacity:0;transition:opacity .2s ease}
+.v3-person-portrait.has-image:hover .v3-person-source{opacity:1}
+
+/* 04 / Result depth — more information density, no extra spectacle. */
+.v3-signal-strip{
+  margin:0;
+  padding:clamp(28px,4.2vw,54px) clamp(18px,4vw,56px);
+  border-top:1px solid rgba(10,10,9,.18);
+  border-bottom:1px solid rgba(10,10,9,.18);
+  background:linear-gradient(90deg,color-mix(in srgb,var(--tc) 7%,transparent),transparent 32%),rgba(255,255,255,.16);
+}
+.v3-signal-head{
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+  align-items:baseline;
+  margin-bottom:clamp(22px,3vw,34px);
+  font:700 8px/1.4 var(--v3-data-mono);
+  letter-spacing:.14em;
+  color:rgba(10,10,9,.44);
+}
+.v3-signal-head b{font-weight:600;letter-spacing:.05em;color:rgba(10,10,9,.5);text-align:right}
+.v3-signal-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid rgba(10,10,9,.18);border-left:1px solid rgba(10,10,9,.18)}
+.v3-signal-card{
+  min-height:146px;
+  padding:20px 18px 18px;
+  border-right:1px solid rgba(10,10,9,.18);
+  border-bottom:1px solid rgba(10,10,9,.18);
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  justify-content:flex-end;
+  position:relative;
+  overflow:hidden;
+}
+.v3-signal-card::before{
+  content:"";
+  position:absolute;
+  left:0;top:0;
+  width:36px;height:3px;
+  background:var(--tc,#0a0a09);
+}
+.v3-signal-card.is-balanced::before{width:100%;opacity:.24}
+.v3-signal-no{position:absolute;right:12px;top:12px;font:700 7px/1 var(--v3-data-mono);letter-spacing:.12em;color:rgba(10,10,9,.28)}
+.v3-signal-card strong{font-family:var(--v3-display-serif);font-size:clamp(23px,2.7vw,38px);line-height:1;letter-spacing:-.045em;color:var(--v3-ink);font-weight:700}
+.v3-signal-card span{margin-top:10px;font:700 8px/1.2 var(--v3-data-mono);letter-spacing:.13em;color:rgba(10,10,9,.46)}
+.v3-signal-card small{margin-top:18px;font:650 8px/1.35 var(--v3-data-mono);letter-spacing:.06em;color:rgba(10,10,9,.55)}
+
+.v3-share-fingerprint{
+  margin-top:clamp(26px,4vw,46px);
+  padding-top:14px;
+  border-top:1px solid currentColor;
+  border-top-color:color-mix(in srgb,currentColor 24%,transparent);
+}
+.v3-share-fingerprint-head{display:flex;justify-content:space-between;gap:12px;font:700 7px/1.2 var(--v3-data-mono);letter-spacing:.14em;opacity:.58}
+.v3-share-fingerprint-head b{font-weight:800}
+.v3-share-fingerprint-bars{margin-top:12px;display:grid;grid-template-columns:repeat(18,minmax(0,1fr));gap:2px;height:30px;align-items:center}
+.v3-share-fingerprint-bars i{display:block;height:4px;background:currentColor;opacity:.2;transform-origin:center;transition:transform .2s var(--v3-ease),opacity .2s ease}
+.v3-share-fingerprint-bars i.is-a{transform:translateY(-5px) scaleY(2.3);opacity:.92}
+.v3-share-fingerprint-bars i.is-b{transform:translateY(5px) scaleY(2.3);opacity:.92}
+
+.v3-dossier-index{
+  position:fixed;
+  left:14px;
+  top:50%;
+  transform:translateY(-50%);
+  z-index:22;
+  width:92px;
+  display:flex;
+  flex-direction:column;
+  gap:1px;
+  background:rgba(239,237,230,.82);
+  border:1px solid rgba(10,10,9,.13);
+  backdrop-filter:blur(12px);
+  -webkit-backdrop-filter:blur(12px);
+}
+.v3-dossier-index-title{padding:10px 9px 8px;font:750 7px/1 var(--v3-data-mono);letter-spacing:.16em;color:rgba(10,10,9,.36);border-bottom:1px solid rgba(10,10,9,.11)}
+.v3-dossier-index a{display:grid;grid-template-columns:20px 1fr;gap:4px;align-items:center;padding:9px 8px;text-decoration:none;color:rgba(10,10,9,.58);border-bottom:1px solid rgba(10,10,9,.08);transition:background .18s ease,color .18s ease}
+.v3-dossier-index a:last-child{border-bottom:0}
+.v3-dossier-index a:hover,.v3-dossier-index a:focus-visible{background:var(--v3-ink);color:var(--v3-paper)}
+.v3-dossier-index b{font:800 7px/1 var(--v3-data-mono);letter-spacing:.08em}
+.v3-dossier-index span{font:650 8px/1.22 var(--v3-reading-sans)}
+
+@media(max-width:1280px){.v3-dossier-index{display:none}}
+
+@media(max-width:900px){
+  .v3-signal-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+
+@media(max-width:760px){
+  .hero h1{letter-spacing:-.065em!important}
+  .hero h1 em{transform:translateX(8px)!important}
+  .quiz-wrap::before{top:118px;right:-2px;font-size:118px}
+  .v3-process-rail{grid-template-columns:1fr;gap:12px;padding:14px 0 20px}
+  .v3-process-copy{display:flex;align-items:center;justify-content:space-between}
+  .v3-process-copy b{margin-top:0}
+  .v3-process-tape{height:46px;gap:3px}
+  .v3-process-cell.is-a::before,.v3-process-cell.is-b::before{height:25px}
+  .question{font-weight:680!important;line-height:1.16!important;letter-spacing:-.045em!important}
+  .person{grid-template-columns:112px minmax(0,1fr)!important;min-height:210px}
+  .v3-person-portrait{min-height:210px}
+  .v3-person-copy{padding:24px 20px}
+  .v3-person-desc{margin-top:15px;font-size:14px;line-height:1.62}
+  .v3-person-name{font-size:19px}
+  .v3-signal-head{display:block}
+  .v3-signal-head b{display:block;margin-top:7px;text-align:left}
+}
+
+@media(max-width:430px){
+  .person{grid-template-columns:1fr!important}
+  .v3-person-portrait{aspect-ratio:4/3;min-height:0;border-right:0;border-bottom:1px solid rgba(10,10,9,.13)}
+  .v3-person-portrait img{object-position:center 20%}
+  .v3-person-portrait[data-person="Jeff Bezos"] img{object-position:center 13%}
+  .v3-person-portrait[data-person="Philip Fisher"] img{object-position:center 10%}
+  .v3-person-copy{padding:24px 4px 30px}
+  .people{background:transparent!important}
+  .person+ .person{border-top:1px solid rgba(10,10,9,.18)}
+  .v3-signal-strip{padding-left:0;padding-right:0;background:transparent}
+  .v3-signal-grid{grid-template-columns:1fr 1fr}
+  .v3-signal-card{min-height:126px;padding:18px 12px 14px}
+  .v3-signal-card strong{font-size:24px}
+  .v3-signal-card small{font-size:7px}
+  .v3-share-fingerprint-bars{gap:1px}
+}
+
+@media(prefers-reduced-motion:reduce){
+  .v3-process-cell::before,.v3-person-portrait img,.v3-person-fallback,.option::before,.v3-share-fingerprint-bars i,.v3-dossier-index a{transition:none!important}
+}

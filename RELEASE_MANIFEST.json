@@ -1,0 +1,284 @@
+{
+  "product": "82TRADE Trader DNA",
+  "assessmentVersion": "standard-v1-2026-09",
+  "sourceCommit": "2586bd0cc133eb71ab8847624445631c86c7533d",
+  "builtAt": "2026-09-19T09:59:49.255Z",
+  "entry": "index.html",
+  "files": [
+    {
+      "path": "index.html",
+      "bytes": 1743,
+      "sha256": "14efc079c7cd5aa86a1927e66bf761844d3b83ddbeda4a0a8c7444230f4d4dfc"
+    },
+    {
+      "path": "app.js",
+      "bytes": 15743,
+      "sha256": "d11d974f04a165ea9296c7f30a227ef3d897a7e8ddb3cbcafc9004ed0832def7"
+    },
+    {
+      "path": "event-persistence.js",
+      "bytes": 3831,
+      "sha256": "0379480c0f31b7a465c4a37c880815fa8e97ae743b7b9aff5b6cde01dcb857a4"
+    },
+    {
+      "path": "styles.css",
+      "bytes": 17101,
+      "sha256": "14d129e0ee6267d6e799f1fdda0592ce251518d196c00a1f9dcbd02870f7dfa7"
+    },
+    {
+      "path": "styles-responsive.css",
+      "bytes": 4552,
+      "sha256": "eca1185be4e672d3a88a827f08d7c84added03bee783cad6acc36d06deca9f36"
+    },
+    {
+      "path": "visual-v3.css",
+      "bytes": 23891,
+      "sha256": "d05d9191845868dfa5b07b63ef84c0021680084f864ba06a8234e51314281c21"
+    },
+    {
+      "path": "visual-v3-motion.css",
+      "bytes": 1913,
+      "sha256": "39a672aa22372f4a9b685fb57ef1dad844dfe6845e37aabb96c4c89f887209ac"
+    },
+    {
+      "path": "visual-v3-polish.css",
+      "bytes": 1322,
+      "sha256": "84cdf62194fee9ccba73ec1c59b0fb4ef478af7a72b77989234edb381da4a1fd"
+    },
+    {
+      "path": "visual-v3-refine.css",
+      "bytes": 14763,
+      "sha256": "ce1c735d898c511cb207cfb0c564e83cc9f5b1cbdb1e9977e0205eaea1fbc550"
+    },
+    {
+      "path": "visual-v3-result-depth.css",
+      "bytes": 7575,
+      "sha256": "09030cab98c2f7ccd617986dc7676708332a7325f9863ddbc0bfe8376b6474d0"
+    },
+    {
+      "path": "visual-v4.css",
+      "bytes": 31710,
+      "sha256": "f4c4f2d74ee197bbc7ddfe52718bdd069e1b1c672755e9d885ca41da594028ce"
+    },
+    {
+      "path": "visual-v4-result.css",
+      "bytes": 38742,
+      "sha256": "e11af62bf5f6c7f8f6e6c76980532d563870356cafba2f2c67106c01b604c610"
+    },
+    {
+      "path": "visual-v3.js",
+      "bytes": 15138,
+      "sha256": "0708b848b640cdb06103d3b97ed76b5825a560922cd6e450c553d29456fa8dea"
+    },
+    {
+      "path": "visual-v3-refine.js",
+      "bytes": 23862,
+      "sha256": "6cfb27102d78b41cc53ca3a338bbaa9339de7ddcc4b2ea93ebe7d1ac7a002017"
+    },
+    {
+      "path": "visual-v3-share-card.js",
+      "bytes": 19674,
+      "sha256": "3a21b5764f97147e33ab6164ed4972f1b3973272f8c3423683a313b0cb262054"
+    },
+    {
+      "path": "visual-v4.js",
+      "bytes": 10999,
+      "sha256": "6fbeaf955f1e184b20e3cd800ade1d543a1b4e179734f4966b5e1e7d68ebced7"
+    },
+    {
+      "path": "visual-v4-result.js",
+      "bytes": 8788,
+      "sha256": "365ae6c4bde44dfe2bab3061e7045089ab09d89d7431fbfd8f19aac82bb83677"
+    },
+    {
+      "path": "data/questions-1.json",
+      "bytes": 7317,
+      "sha256": "63a0efbe03631747abb0ca6599de96500e52d274cb657c7c2cd44ac607e6688c"
+    },
+    {
+      "path": "data/questions-2.json",
+      "bytes": 7209,
+      "sha256": "698db70d4a1eaf689e42cb2bf996cbb8d140cf8f482f8eaaa58999d8bade4288"
+    },
+    {
+      "path": "data/questions-3.json",
+      "bytes": 7284,
+      "sha256": "6197c9ddf32d8cc03c9c94ab19a8133a9742db5fab8aa694bd6d02a874ad6353"
+    },
+    {
+      "path": "data/types.json",
+      "bytes": 17931,
+      "sha256": "ba06fa95764d9e2950c5372daa1b286d490bd3a12c89c07d0c4df8ddd8a43773"
+    },
+    {
+      "path": "assets/portraits/warren-buffett.jpg",
+      "bytes": 144009,
+      "sha256": "7de66aacc826c60fdf7f672a34922216a35121948730c23b3f7822e5cb521d00"
+    },
+    {
+      "path": "assets/portraits/charles-darwin.jpg",
+      "bytes": 80155,
+      "sha256": "63f513109badb5cfcf6a713cdbc0e03df8e05d31da87912cd5273bd81039b71a"
+    },
+    {
+      "path": "assets/portraits/charlie-munger.jpg",
+      "bytes": 95092,
+      "sha256": "ec22fc3b8274adaacd7beb540c6e005b8b4ed93c42114ad5376b2cc8ce860b8b"
+    },
+    {
+      "path": "assets/portraits/howard-marks.jpg",
+      "bytes": 309456,
+      "sha256": "617918a4b9d190e33adb4213f6e9babe66d5292cc5f3a5f00b8d3328f4da0652"
+    },
+    {
+      "path": "assets/portraits/philip-fisher.svg",
+      "bytes": 1341,
+      "sha256": "533fdd12eaa57556783785f80164b47641389562e3e2990ed8f1df9b803e8185"
+    },
+    {
+      "path": "assets/portraits/peter-thiel.jpg",
+      "bytes": 134762,
+      "sha256": "9d1bfe9a248faebef9efe2284ccf3d590d10ae7a70bf76b388d6e4c49a6944ce"
+    },
+    {
+      "path": "assets/portraits/marc-andreessen.jpg",
+      "bytes": 223262,
+      "sha256": "339681b9affded7b78343f0b65024dd03fb563cee4733bfe45f4ce72c4a40ed0"
+    },
+    {
+      "path": "assets/portraits/paul-tudor-jones.jpg",
+      "bytes": 132412,
+      "sha256": "5e21b6fdeac4cf11d301ce2165f897f5ca91eb10f7dac14d847f0987a3e6c4d5"
+    },
+    {
+      "path": "assets/portraits/chester-nimitz.jpg",
+      "bytes": 58457,
+      "sha256": "00550621be2446f323916c852540af025ff4c2f91b2b644a8d3471ecdbb421e5"
+    },
+    {
+      "path": "assets/portraits/stanley-druckenmiller.svg",
+      "bytes": 1357,
+      "sha256": "c6d4848fa196d5b1dd99c94ec8ac246bf3f79e6db9c5c36f502ae9968c05e568"
+    },
+    {
+      "path": "assets/portraits/jeff-bezos.jpg",
+      "bytes": 1401147,
+      "sha256": "21d55189e576a97e05475b3da361d0de9cf9f918f4f7885e50fb83309049c22b"
+    },
+    {
+      "path": "assets/portraits/jesse-livermore.svg",
+      "bytes": 1345,
+      "sha256": "1d87feb84fa8083bf1a5f46e579d3d949c15df9eb40adbe7fcfcc0f29adafb33"
+    },
+    {
+      "path": "assets/portraits/steve-jobs.jpg",
+      "bytes": 270034,
+      "sha256": "d248cd7d98a08aae2150fb39e7ac9989991a6134a6b98adb473afdba66221087"
+    },
+    {
+      "path": "assets/portraits/nassim-nicholas-taleb.svg",
+      "bytes": 1357,
+      "sha256": "a73f6add0e6d13a8a023d8de22cfad39455c83a79738ccaa8956746ba7380fde"
+    },
+    {
+      "path": "assets/portraits/george-soros.jpg",
+      "bytes": 220007,
+      "sha256": "86835964eab322604b13589d388e13ee2df213a8aad591621547d1e42cf45d13"
+    },
+    {
+      "path": "assets/portraits/daniel-kahneman.svg",
+      "bytes": 1345,
+      "sha256": "e35b169ab7602df4f8ff08b0106ae30ed11b4835030bb9cd336c76e9e44baf2f"
+    },
+    {
+      "path": "assets/portraits/benjamin-graham.svg",
+      "bytes": 1345,
+      "sha256": "840e3c54b5dab06f318eef5a431978929a4581896b6430b2b4b29543b875d54a"
+    },
+    {
+      "path": "assets/portraits/michael-mauboussin.svg",
+      "bytes": 1351,
+      "sha256": "881ef801c6657c645ab892dc76de99bd9d8aa1339a0ebfaa1357a05d6f73a65e"
+    },
+    {
+      "path": "assets/portraits/peter-lynch.svg",
+      "bytes": 1337,
+      "sha256": "b5a71afe4288191f9143463c227444fd7d6b3332ef2af38cd4043d6102d0e257"
+    },
+    {
+      "path": "assets/portraits/li-lu.svg",
+      "bytes": 1325,
+      "sha256": "802097329d46b464a4b333485efe1b7a6d5ee4ba8af63ae82d036d3cc3a72db1"
+    },
+    {
+      "path": "assets/portraits/dwight-eisenhower.jpg",
+      "bytes": 284909,
+      "sha256": "6776df8a1a43ca5b8a0e130de705efff6620db2c7218debac4e6a546f7f7c8b5"
+    },
+    {
+      "path": "assets/portraits/marcus-aurelius.jpg",
+      "bytes": 299908,
+      "sha256": "44209ec672e3c817c4604acfd631dafbbf40fa7ad493554372f18a62a7303bd6"
+    },
+    {
+      "path": "assets/portraits/ed-seykota.svg",
+      "bytes": 1335,
+      "sha256": "40fac5874dc4a4acf95bb66df85df8c92dcd86458bcbd34e187669d084ac46c9"
+    },
+    {
+      "path": "assets/portraits/marie-curie.svg",
+      "bytes": 1337,
+      "sha256": "2f342038b71718c79f1f7d773e5eb820dca59e380b00d3804834076ad87a405f"
+    },
+    {
+      "path": "assets/portraits/jim-simons.jpg",
+      "bytes": 142065,
+      "sha256": "8764801100f81ca1405501fcf0227d13296cb51a14807999cc6094ffbb5a229d"
+    },
+    {
+      "path": "assets/portraits/edward-thorp.svg",
+      "bytes": 1339,
+      "sha256": "7e2fa864234146ac12d969bb230478aa97f008133ef8b13ebd4e955ce6b6ab3f"
+    },
+    {
+      "path": "assets/portraits/jack-bogle.svg",
+      "bytes": 1335,
+      "sha256": "c62a6b12977b1748aabf46d75534431b4b4d7188d1d39b09360f62295b4fbd9e"
+    },
+    {
+      "path": "assets/portraits/elon-musk.jpg",
+      "bytes": 213801,
+      "sha256": "86935b0e208f9486de12c6e67c3027ca9218695edbe8d22c40a3331024179b41"
+    },
+    {
+      "path": "assets/portraits/david-tepper.svg",
+      "bytes": 1339,
+      "sha256": "d767edd3914e7b157214d456ed03b8919e80cbe8386f6efe4d466c153e9dc563"
+    },
+    {
+      "path": "assets/portraits/john-maynard-keynes.svg",
+      "bytes": 1353,
+      "sha256": "a8865d546b84e664694bb4a13f374076188c2fc260b51672ae74e23e79a378c9"
+    },
+    {
+      "path": "assets/portraits/john-d-rockefeller.svg",
+      "bytes": 1353,
+      "sha256": "94ee53e07ff4dd98366a1445fd0279921a631f281b214bac3fa65cf21b37acae"
+    },
+    {
+      "path": "assets/portraits/miyamoto-musashi.png",
+      "bytes": 2321157,
+      "sha256": "5befafe884671e8bf824c3dbf01ee42efcecc66b8ec70179bdeb5373ba71d8b3"
+    },
+    {
+      "path": "data/portraits.json",
+      "bytes": 8193,
+      "sha256": "1826b1d8a94c58030b7014cd25bc7fbc9b272aeaafb462450b43b5a31427bcd8"
+    },
+    {
+      "path": "sw.js",
+      "bytes": 3159,
+      "sha256": "67509871d2c2a8171c38e6f5efb2f9669fedfe100b870aaa8fb1fb944162b03b"
+    }
+  ]
+}
