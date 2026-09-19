@@ -10,6 +10,16 @@
     const scene=view.querySelector('.hero')?'opening':view.querySelector('.quiz-wrap')?'quiz':view.querySelector('.reveal')?'reveal':view.querySelector('.result')?'result':'loading';
     document.body.dataset.v5Scene=scene;
 
+    const qText=view.querySelector('.question-index')?.textContent?.trim()||'';
+    const qNum=Number(qText.replace(/\D/g,''))||0;
+    if(scene==='quiz'&&qNum){
+      document.body.dataset.v5Question=String(qNum).padStart(2,'0');
+      document.body.dataset.v5Beat=qNum<=6?'forming':qNum<=9?'pressure-a':qNum<=12?'pressure-b':qNum<=17?'lock':'final';
+    }else{
+      delete document.body.dataset.v5Question;
+      delete document.body.dataset.v5Beat;
+    }
+
     const studio=view.querySelector('.v3-share-studio');
     const publishState=studio?.dataset.v48Publish||'';
     if(publishState&&publishState!==lastPublishState){
