@@ -1,0 +1,29 @@
+name: V5 portable preview
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - v5/**
+      - .github/workflows/v5-portable-preview.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Publish portable preview
+        id: deploy
+        uses: shipstatic/action@v2
+        with:
+          path: .
+          labels: trader-dna,v5,functional-preview
+      - name: Receipt
+        run: |
+          echo "URL=${{ steps.deploy.outputs.url }}"
+          echo "EXPIRES=${{ steps.deploy.outputs.expires }}"
