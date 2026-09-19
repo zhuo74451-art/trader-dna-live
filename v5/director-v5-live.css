@@ -248,15 +248,98 @@
   position:absolute!important;right:clamp(22px,4vw,62px)!important;bottom:24px!important;left:auto!important;width:auto!important;
 }
 .v5-functional-preview .result.v4-issue .v47-identity-stack{
-  left:53%!important;right:auto!important;top:50%!important;bottom:auto!important;
-  width:min(40vw,540px)!important;transform:translate(-50%,-50%)!important;perspective:1500px!important;
+  left:54%!important;right:auto!important;top:47.5%!important;bottom:auto!important;
+  width:min(46vw,620px)!important;transform:translate(-50%,-50%)!important;perspective:1500px!important;
 }
 .v5-functional-preview .result.v4-issue .v47-identity-back,
 .v5-functional-preview .result.v4-issue .v47-identity-front{display:none!important}
 .v5-functional-preview .result.v4-issue .v47-identity-plate{position:absolute!important;inset:0!important;transform:none!important}
 .v5-functional-preview .result.v4-issue .v47-identity-plate .v4-result-mark{
-  inset:0!important;width:100%!important;height:100%!important;transform:rotateY(-3deg) rotateX(1deg)!important;
-  box-shadow:0 42px 90px rgba(0,0,0,.44),12px 0 50px rgba(209,160,93,.055)!important;
+  inset:0!important;width:100%!important;height:100%!important;transform:rotateY(-2deg) rotateX(.7deg)!important;
+  box-shadow:0 48px 110px rgba(0,0,0,.5),14px 0 56px rgba(209,160,93,.06)!important;
+}
+
+/* V5 dossier subtraction pass — denser editorial rhythm, clearer measurement, intentional archive fallbacks. */
+.v5-functional-preview .result.v4-issue .portrait-section{
+  min-height:680px!important;
+  padding:clamp(82px,8vw,118px) clamp(28px,7vw,108px)!important;
+  grid-template-columns:minmax(150px,.32fr) minmax(0,1.35fr)!important;
+  gap:clamp(42px,5vw,78px)!important;
+}
+.v5-functional-preview .result.v4-issue .portrait-section .portrait{
+  max-width:860px!important;
+  columns:2!important;
+  column-gap:clamp(44px,5vw,72px)!important;
+  font-size:clamp(18px,1.35vw,21px)!important;
+  line-height:1.78!important;
+}
+.v5-functional-preview .result.v4-issue .portrait-section .portrait p{
+  margin-bottom:1.25em!important;
+}
+
+.v5-functional-preview .result.v4-issue .dims-section{
+  padding-top:clamp(82px,8vw,118px)!important;
+  padding-bottom:clamp(88px,9vw,132px)!important;
+  grid-template-columns:minmax(150px,.32fr) minmax(0,1.4fr)!important;
+  gap:clamp(42px,6vw,92px)!important;
+}
+.v5-functional-preview .result.v4-issue .dims-section .dim-row{
+  padding:clamp(24px,2.6vw,34px) 0!important;
+}
+.v5-functional-preview .result.v4-issue .dims-section .dim-top b{
+  color:rgba(10,10,9,.78)!important;
+  font-size:clamp(13px,1vw,15px)!important;
+  font-weight:700!important;
+}
+.v5-functional-preview .result.v4-issue .dims-section .dim-top span{
+  color:rgba(10,10,9,.5)!important;
+  font-size:9px!important;
+}
+.v5-functional-preview .result.v4-issue .dims-section .track{
+  height:1px!important;
+  background:rgba(10,10,9,.17)!important;
+}
+.v5-functional-preview .result.v4-issue .dims-section .track-mid{
+  top:-4px!important;height:9px!important;background:rgba(10,10,9,.28)!important;
+}
+.v5-functional-preview .result.v4-issue .dims-section .track i{
+  position:relative!important;height:3px!important;top:-1px!important;
+  background:#171715!important;opacity:1!important;
+}
+.v5-functional-preview .result.v4-issue .dims-section .track i::after{
+  content:"";position:absolute;right:-4px;top:-3px;width:8px;height:8px;
+  background:var(--tc,#ff7f87);transform:rotate(45deg);
+}
+.v5-functional-preview .result.v4-issue .dims-section .dim-lead{
+  margin-top:2px!important;
+  color:rgba(10,10,9,.68)!important;
+  font-size:11px!important;font-weight:700!important;
+}
+
+.v5-functional-preview .result.v4-issue .v3-person-fallback{
+  justify-content:flex-end!important;
+  background:
+    linear-gradient(90deg,rgba(10,10,9,.035) 1px,transparent 1px) 0 0/28px 28px,
+    linear-gradient(rgba(10,10,9,.035) 1px,transparent 1px) 0 0/28px 28px,
+    linear-gradient(145deg,rgba(255,255,255,.34),transparent 46%),
+    #d7d4cc!important;
+}
+.v5-functional-preview .result.v4-issue .v3-person-fallback::before{display:none!important}
+.v5-functional-preview .result.v4-issue .v3-person-fallback span{
+  left:14px!important;top:14px!important;
+  font-size:7px!important;letter-spacing:.16em!important;color:rgba(10,10,9,.44)!important;
+}
+.v5-functional-preview .result.v4-issue .v3-person-fallback b{
+  position:absolute!important;left:14px!important;bottom:20px!important;
+  font-size:clamp(72px,7vw,112px)!important;line-height:.72!important;
+  color:rgba(10,10,9,.12)!important;letter-spacing:-.09em!important;
+}
+.v5-functional-preview .result.v4-issue .v3-person-fallback small{
+  font-size:0!important;color:rgba(10,10,9,.42)!important;
+}
+.v5-functional-preview .result.v4-issue .v3-person-fallback small::after{
+  content:"REFERENCE / TYPE ARCHIVE";
+  font:700 6px/1 var(--v3-data-mono)!important;letter-spacing:.14em!important;
 }
 
 /* GF-03 — preserve the real V4.8 publish state machine, then let the artifact own the frame. */
@@ -286,9 +369,10 @@
 }
 .v5-functional-preview .result.v4-issue .v3-share-studio[data-v48-publish="published"] .v3-share-stage{
   grid-area:stage!important;
-  width:min(46vw,500px)!important;
+  width:min(50vw,560px)!important;
   justify-self:center!important;
   transform:none!important;
+  border:0!important;background:transparent!important;
   box-shadow:none!important;
 }
 .v5-functional-preview .result.v4-issue .v3-share-studio[data-format="9:16"][data-v48-publish="published"] .v3-share-stage{
@@ -353,8 +437,21 @@
   .v5-functional-preview .v3-hero-material:has(.v4-landing-specimen) .v4-landing-specimen .v4-weave{height:68px!important}
   .v5-functional-preview .result.v4-issue .result-hero{min-height:88svh!important}
   .v5-functional-preview .result.v4-issue .v47-identity-stack{
-    left:50%!important;top:50%!important;width:min(82vw,350px)!important;
+    left:50%!important;top:47%!important;width:min(86vw,365px)!important;
   }
+  .v5-functional-preview .result.v4-issue .portrait-section{
+    min-height:auto!important;
+    padding:76px 18px 68px!important;
+  }
+  .v5-functional-preview .result.v4-issue .portrait-section .portrait{
+    columns:1!important;font-size:16px!important;line-height:1.76!important;
+  }
+  .v5-functional-preview .result.v4-issue .dims-section{
+    padding:76px 18px 72px!important;
+  }
+  .v5-functional-preview .result.v4-issue .dims-section .dim-top b{font-size:13px!important}
+  .v5-functional-preview .result.v4-issue .dims-section .dim-top span{font-size:7px!important}
+  .v5-functional-preview .result.v4-issue .v3-person-fallback b{font-size:82px!important}
   .v5-functional-preview .result.v4-issue .result-hero>.hook{left:18px!important;right:18px!important;bottom:7%!important;font-size:14px!important}
   .v5-functional-preview .result.v4-issue .result-hero .result-kicker{left:18px!important;bottom:16%!important}
   .v5-functional-preview .result.v4-issue .result-hero .result-foot{display:none!important}
