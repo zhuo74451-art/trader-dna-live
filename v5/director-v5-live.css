@@ -87,7 +87,8 @@
   color:rgba(239,235,226,.27)!important;pointer-events:none!important;
 }
 .v5-functional-preview .hero:has(.v4-landing-specimen) .hero-object{
-  position:absolute!important;inset:0!important;padding:0!important;margin:0!important;
+  position:absolute!important;inset:0!important;width:100%!important;max-width:none!important;
+  padding:0!important;margin:0!important;justify-self:stretch!important;align-self:stretch!important;
   display:block!important;z-index:4!important;pointer-events:none;
 }
 .v5-functional-preview .hero:has(.v4-landing-specimen) .hero-object::before,
