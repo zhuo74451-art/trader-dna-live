@@ -22,7 +22,7 @@ jobs:
         uses: shipstatic/action@v2
         with:
           path: .
-          labels: trader-dna,v5,functional-preview
+          labels: trader-dna,version5,functional-preview
       - name: Receipt
         run: |
           echo "URL=${{ steps.deploy.outputs.url }}"
